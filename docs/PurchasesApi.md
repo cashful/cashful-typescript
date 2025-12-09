@@ -22,11 +22,11 @@ Buy with Cash Balance
 import {
   Configuration,
   PurchasesApi,
-} from '@cashful-co/typescript-sdk';
-import type { CreatePurchaseRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { CreatePurchaseRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

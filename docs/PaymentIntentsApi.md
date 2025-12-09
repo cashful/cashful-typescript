@@ -23,11 +23,11 @@ Server-to-server API to charge a saved card. Used for subscriptions or recurring
 import {
   Configuration,
   PaymentIntentsApi,
-} from '@cashful-co/typescript-sdk';
-import type { CreatePaymentIntentRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { CreatePaymentIntentRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -99,11 +99,11 @@ Checks the status of a specific server-to-server charge.
 import {
   Configuration,
   PaymentIntentsApi,
-} from '@cashful-co/typescript-sdk';
-import type { RetrievePaymentIntentRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { RetrievePaymentIntentRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

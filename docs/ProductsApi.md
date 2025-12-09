@@ -24,11 +24,11 @@ Defines a product in the merchant\&#39;s catalog (e.g., \&quot;Airtime,\&quot; \
 import {
   Configuration,
   ProductsApi,
-} from '@cashful-co/typescript-sdk';
-import type { CreateProductRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { CreateProductRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -98,11 +98,11 @@ Retrieves all products in the merchant\&#39;s catalog.
 import {
   Configuration,
   ProductsApi,
-} from '@cashful-co/typescript-sdk';
-import type { ListProductsRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { ListProductsRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -182,11 +182,11 @@ Updates a product\&#39;s name, description, or metadata.
 import {
   Configuration,
   ProductsApi,
-} from '@cashful-co/typescript-sdk';
-import type { UpdateProductRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { UpdateProductRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

@@ -22,11 +22,11 @@ Creates a hosted payment page. Used for: (1) A standard e-commerce purchase, or 
 import {
   Configuration,
   CheckoutsApi,
-} from '@cashful-co/typescript-sdk';
-import type { CreateCheckoutSessionRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { CreateCheckoutSessionRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

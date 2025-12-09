@@ -23,11 +23,11 @@ Detaches and deletes a saved payment method from a customer.
 import {
   Configuration,
   PaymentMethodsApi,
-} from '@cashful-co/typescript-sdk';
-import type { DeletePaymentMethodRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { DeletePaymentMethodRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -97,11 +97,11 @@ Gets the non-sensitive details of a saved card (e.g., brand, last 4).
 import {
   Configuration,
   PaymentMethodsApi,
-} from '@cashful-co/typescript-sdk';
-import type { RetrievePaymentMethodRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { RetrievePaymentMethodRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

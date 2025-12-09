@@ -12,7 +12,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { RemoveMemberDto } from '@cashful-co/typescript-sdk'
+import type { RemoveMemberDto } from '@cashful-co/typescript'
 
 // TODO: Update the object below with actual values
 const example = {

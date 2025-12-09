@@ -24,11 +24,11 @@ Creates a re-usable hosted link. Can be used for: (1) Selling a product, or (2) 
 import {
   Configuration,
   PaymentLinksApi,
-} from '@cashful-co/typescript-sdk';
-import type { CreatePaymentLinkRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { CreatePaymentLinkRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -98,11 +98,11 @@ Retrieves all payment links created by the merchant.
 import {
   Configuration,
   PaymentLinksApi,
-} from '@cashful-co/typescript-sdk';
-import type { ListPaymentLinksRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { ListPaymentLinksRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -182,11 +182,11 @@ Updates a link\&#39;s details, most commonly to set active: false.
 import {
   Configuration,
   PaymentLinksApi,
-} from '@cashful-co/typescript-sdk';
-import type { UpdatePaymentLinkRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { UpdatePaymentLinkRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

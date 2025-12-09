@@ -28,11 +28,11 @@ Creates a new customer object. This also provisions their \&quot;cash balance\&q
 import {
   Configuration,
   CustomersApi,
-} from '@cashful-co/typescript-sdk';
-import type { CreateCustomerRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { CreateCustomerRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -103,11 +103,11 @@ Retrieves the real-time balance for a single customer\&#39;s \&quot;cash balance
 import {
   Configuration,
   CustomersApi,
-} from '@cashful-co/typescript-sdk';
-import type { GetCustomerBalanceRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { GetCustomerBalanceRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -177,11 +177,11 @@ Shows all saved payment methods (cards, etc.) for a single customer.
 import {
   Configuration,
   CustomersApi,
-} from '@cashful-co/typescript-sdk';
-import type { ListCustomerPaymentMethodsRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { ListCustomerPaymentMethodsRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -251,11 +251,11 @@ Provides the full transaction history for a single customer\&#39;s \&quot;cash b
 import {
   Configuration,
   CustomersApi,
-} from '@cashful-co/typescript-sdk';
-import type { ListCustomerTransactionsRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { ListCustomerTransactionsRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -325,11 +325,11 @@ Retrieves a paginated list of all customers for the merchant.
 import {
   Configuration,
   CustomersApi,
-} from '@cashful-co/typescript-sdk';
-import type { ListCustomersRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { ListCustomersRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -412,11 +412,11 @@ Gets the details for a single customer.
 import {
   Configuration,
   CustomersApi,
-} from '@cashful-co/typescript-sdk';
-import type { RetrieveCustomerRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { RetrieveCustomerRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -486,11 +486,11 @@ Updates a customer\&#39;s details (e.g., email, metadata).
 import {
   Configuration,
   CustomersApi,
-} from '@cashful-co/typescript-sdk';
-import type { UpdateCustomerRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { UpdateCustomerRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

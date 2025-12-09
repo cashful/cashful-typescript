@@ -1,4 +1,4 @@
-# @cashful-co/typescript-sdk@0.0.1
+# @cashful-co/typescript@0.0.1
 
 A TypeScript SDK client for the localhost API.
 
@@ -7,7 +7,7 @@ A TypeScript SDK client for the localhost API.
 First, install the SDK from npm.
 
 ```bash
-npm install @cashful-co/typescript-sdk --save
+npm install @cashful-co/typescript --save
 ```
 
 Next, try it out.
@@ -17,11 +17,11 @@ Next, try it out.
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript-sdk';
-import type { AcceptInvitationRequest } from '@cashful-co/typescript-sdk';
+} from '@cashful-co/typescript';
+import type { AcceptInvitationRequest } from '@cashful-co/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript-sdk SDK...");
+  console.log("🚀 Testing @cashful-co/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
