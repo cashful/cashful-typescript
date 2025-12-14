@@ -24,6 +24,12 @@ export interface Organization {
      * @type {string}
      * @memberof Organization
      */
+    id: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Organization
+     */
     name: string;
     /**
      * 
@@ -31,14 +37,34 @@ export interface Organization {
      * @memberof Organization
      */
     slug: string;
+    /**
+     * 
+     * @type {Date}
+     * @memberof Organization
+     */
+    createdAt: Date;
+    /**
+     * 
+     * @type {string}
+     * @memberof Organization
+     */
+    logo?: string;
+    /**
+     * 
+     * @type {object}
+     * @memberof Organization
+     */
+    metadata?: object;
 }
 
 /**
  * Check if a given object implements the Organization interface.
  */
 export function instanceOfOrganization(value: object): value is Organization {
+    if (!('id' in value) || value['id'] === undefined) return false;
     if (!('name' in value) || value['name'] === undefined) return false;
     if (!('slug' in value) || value['slug'] === undefined) return false;
+    if (!('createdAt' in value) || value['createdAt'] === undefined) return false;
     return true;
 }
 
@@ -52,8 +78,12 @@ export function OrganizationFromJSONTyped(json: any, ignoreDiscriminator: boolea
     }
     return {
         
+        'id': json['id'],
         'name': json['name'],
         'slug': json['slug'],
+        'createdAt': (new Date(json['createdAt'])),
+        'logo': json['logo'] == null ? undefined : json['logo'],
+        'metadata': json['metadata'] == null ? undefined : json['metadata'],
     };
 }
 
@@ -68,8 +98,12 @@ export function OrganizationToJSONTyped(value?: Organization | null, ignoreDiscr
 
     return {
         
+        'id': value['id'],
         'name': value['name'],
         'slug': value['slug'],
+        'createdAt': value['createdAt'].toISOString(),
+        'logo': value['logo'],
+        'metadata': value['metadata'],
     };
 }
 

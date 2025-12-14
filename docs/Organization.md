@@ -6,8 +6,12 @@
 
 Name | Type
 ------------ | -------------
+`id` | string
 `name` | string
 `slug` | string
+`createdAt` | Date
+`logo` | string
+`metadata` | object
 
 ## Example
 
@@ -16,8 +20,12 @@ import type { Organization } from '@cashful-co/typescript'
 
 // TODO: Update the object below with actual values
 const example = {
+  "id": null,
   "name": null,
   "slug": null,
+  "createdAt": null,
+  "logo": null,
+  "metadata": null,
 } satisfies Organization
 
 console.log(example)
