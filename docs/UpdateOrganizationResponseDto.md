@@ -6,7 +6,7 @@
 
 Name | Type
 ------------ | -------------
-`organization` | [Organization](Organization.md)
+`organization` | [OrganizationDto](OrganizationDto.md)
 
 ## Example
 

@@ -13,13 +13,13 @@
  */
 
 import { mapValues } from '../runtime';
-import type { Organization } from './Organization';
+import type { OrganizationDto } from './OrganizationDto';
 import {
-    OrganizationFromJSON,
-    OrganizationFromJSONTyped,
-    OrganizationToJSON,
-    OrganizationToJSONTyped,
-} from './Organization';
+    OrganizationDtoFromJSON,
+    OrganizationDtoFromJSONTyped,
+    OrganizationDtoToJSON,
+    OrganizationDtoToJSONTyped,
+} from './OrganizationDto';
 
 /**
  * 
@@ -29,10 +29,10 @@ import {
 export interface UpdateOrganizationResponseDto {
     /**
      * Organization updated successfully
-     * @type {Organization}
+     * @type {OrganizationDto}
      * @memberof UpdateOrganizationResponseDto
      */
-    organization: Organization;
+    organization: OrganizationDto;
 }
 
 /**
@@ -53,7 +53,7 @@ export function UpdateOrganizationResponseDtoFromJSONTyped(json: any, ignoreDisc
     }
     return {
         
-        'organization': OrganizationFromJSON(json['organization']),
+        'organization': OrganizationDtoFromJSON(json['organization']),
     };
 }
 
@@ -68,7 +68,7 @@ export function UpdateOrganizationResponseDtoToJSONTyped(value?: UpdateOrganizat
 
     return {
         
-        'organization': OrganizationToJSON(value['organization']),
+        'organization': OrganizationDtoToJSON(value['organization']),
     };
 }
 

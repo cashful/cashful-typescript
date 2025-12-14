@@ -1650,7 +1650,7 @@ example().catch(console.error);
 
 ## listOrganizations
 
-> ListOrganizationsResponseDto listOrganizations(include)
+> Array&lt;OrganizationDto&gt; listOrganizations(include)
 
 List Organizations
 
@@ -1699,7 +1699,7 @@ example().catch(console.error);
 
 ### Return type
 
-[**ListOrganizationsResponseDto**](ListOrganizationsResponseDto.md)
+[**Array&lt;OrganizationDto&gt;**](OrganizationDto.md)
 
 ### Authorization
 

@@ -52,9 +52,9 @@ import type {
   ListApiKeysResponseDto,
   ListInvitationsResponseDto,
   ListMembersResponseDto,
-  ListOrganizationsResponseDto,
   ListSessionsResponseDto,
   ListUserInvitationsResponseDto,
+  OrganizationDto,
   RejectInvitationDto,
   RejectInvitationResponseDto,
   RemoveMemberDto,
@@ -162,12 +162,12 @@ import {
     ListInvitationsResponseDtoToJSON,
     ListMembersResponseDtoFromJSON,
     ListMembersResponseDtoToJSON,
-    ListOrganizationsResponseDtoFromJSON,
-    ListOrganizationsResponseDtoToJSON,
     ListSessionsResponseDtoFromJSON,
     ListSessionsResponseDtoToJSON,
     ListUserInvitationsResponseDtoFromJSON,
     ListUserInvitationsResponseDtoToJSON,
+    OrganizationDtoFromJSON,
+    OrganizationDtoToJSON,
     RejectInvitationDtoFromJSON,
     RejectInvitationDtoToJSON,
     RejectInvitationResponseDtoFromJSON,
@@ -1416,7 +1416,7 @@ export class AuthenticationApi extends runtime.BaseAPI {
      * List all organizations for the current user
      * List Organizations
      */
-    async listOrganizationsRaw(requestParameters: ListOrganizationsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListOrganizationsResponseDto>> {
+    async listOrganizationsRaw(requestParameters: ListOrganizationsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Array<OrganizationDto>>> {
         const queryParameters: any = {};
 
         if (requestParameters['include'] != null) {
@@ -1443,14 +1443,14 @@ export class AuthenticationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ListOrganizationsResponseDtoFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(OrganizationDtoFromJSON));
     }
 
     /**
      * List all organizations for the current user
      * List Organizations
      */
-    async listOrganizations(include?: boolean, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListOrganizationsResponseDto> {
+    async listOrganizations(include?: boolean, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Array<OrganizationDto>> {
         const response = await this.listOrganizationsRaw({ include: include }, initOverrides);
         return await response.value();
     }

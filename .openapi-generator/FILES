@@ -72,7 +72,6 @@ docs/ListCustomersResponseDto.md
 docs/ListEventsResponseDto.md
 docs/ListInvitationsResponseDto.md
 docs/ListMembersResponseDto.md
-docs/ListOrganizationsResponseDto.md
 docs/ListPaymentLinksResponseDto.md
 docs/ListPayoutsResponseDto.md
 docs/ListProductsResponseDto.md
@@ -82,7 +81,6 @@ docs/ListUsersResponseDto.md
 docs/ListWebhookEndpointsResponseDto.md
 docs/MemberDto.md
 docs/MerchantBalanceResponseDto.md
-docs/Organization.md
 docs/OrganizationDto.md
 docs/PaginationResponseDto.md
 docs/PaymentIntentResponseDto.md
@@ -226,7 +224,6 @@ src/models/ListCustomersResponseDto.ts
 src/models/ListEventsResponseDto.ts
 src/models/ListInvitationsResponseDto.ts
 src/models/ListMembersResponseDto.ts
-src/models/ListOrganizationsResponseDto.ts
 src/models/ListPaymentLinksResponseDto.ts
 src/models/ListPayoutsResponseDto.ts
 src/models/ListProductsResponseDto.ts
@@ -236,7 +233,6 @@ src/models/ListUsersResponseDto.ts
 src/models/ListWebhookEndpointsResponseDto.ts
 src/models/MemberDto.ts
 src/models/MerchantBalanceResponseDto.ts
-src/models/Organization.ts
 src/models/OrganizationDto.ts
 src/models/PaginationResponseDto.ts
 src/models/PaymentIntentResponseDto.ts
