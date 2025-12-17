@@ -25,6 +25,10 @@ import {
     ErrorResponseDtoToJSON,
 } from '../models/index';
 
+export interface GetAnalyticsRequest {
+    merchantId: string;
+}
+
 /**
  * 
  */
@@ -34,8 +38,19 @@ export class AnalyticsApi extends runtime.BaseAPI {
      * Retrieves transaction volume and customer growth metrics for the merchant.
      * Get Analytics
      */
-    async getAnalyticsRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<AnalyticsResponseDto>> {
+    async getAnalyticsRaw(requestParameters: GetAnalyticsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<AnalyticsResponseDto>> {
+        if (requestParameters['merchantId'] == null) {
+            throw new runtime.RequiredError(
+                'merchantId',
+                'Required parameter "merchantId" was null or undefined when calling getAnalytics().'
+            );
+        }
+
         const queryParameters: any = {};
+
+        if (requestParameters['merchantId'] != null) {
+            queryParameters['merchantId'] = requestParameters['merchantId'];
+        }
 
         const headerParameters: runtime.HTTPHeaders = {};
 
@@ -64,8 +79,8 @@ export class AnalyticsApi extends runtime.BaseAPI {
      * Retrieves transaction volume and customer growth metrics for the merchant.
      * Get Analytics
      */
-    async getAnalytics(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AnalyticsResponseDto> {
-        const response = await this.getAnalyticsRaw(initOverrides);
+    async getAnalytics(merchantId: string, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AnalyticsResponseDto> {
+        const response = await this.getAnalyticsRaw({ merchantId: merchantId }, initOverrides);
         return await response.value();
     }
 

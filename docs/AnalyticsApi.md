@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost:3000*
 
 ## getAnalytics
 
-> AnalyticsResponseDto getAnalytics()
+> AnalyticsResponseDto getAnalytics(merchantId)
 
 Get Analytics
 
@@ -33,8 +33,13 @@ async function example() {
   });
   const api = new AnalyticsApi(config);
 
+  const body = {
+    // string | The unique identifier of the merchant
+    merchantId: merchant_123,
+  } satisfies GetAnalyticsRequest;
+
   try {
-    const data = await api.getAnalytics();
+    const data = await api.getAnalytics(body);
     console.log(data);
   } catch (error) {
     console.error(error);
@@ -47,7 +52,10 @@ example().catch(console.error);
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | `string` | The unique identifier of the merchant | [Defaults to `undefined`] |
 
 ### Return type
 
