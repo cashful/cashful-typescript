@@ -3,6 +3,8 @@
 README.md
 docs/AcceptInvitationDto.md
 docs/AcceptInvitationResponseDto.md
+docs/AnalyticsApi.md
+docs/AnalyticsResponseDto.md
 docs/ApiKey.md
 docs/AuthenticationApi.md
 docs/BalanceApi.md
@@ -37,8 +39,10 @@ docs/CreatePurchaseDto.md
 docs/CreateTransferDto.md
 docs/CreateWebhookEndpointDto.md
 docs/CustomerResponseDto.md
+docs/CustomerStatsDto.md
 docs/CustomerTransactionDto.md
 docs/CustomersApi.md
+docs/DailyBreakdownDto.md
 docs/DeleteApiKeyDto.md
 docs/DeleteApiKeyResponseDto.md
 docs/DeleteOrganizationDto.md
@@ -83,6 +87,7 @@ docs/ListUsersResponseDto.md
 docs/ListWebhookEndpointsResponseDto.md
 docs/MemberDto.md
 docs/MerchantBalanceResponseDto.md
+docs/MetricStatsDto.md
 docs/OrganizationDto.md
 docs/PaginationResponseDto.md
 docs/PaymentIntentResponseDto.md
@@ -122,6 +127,7 @@ docs/SignOutResponseDto.md
 docs/SignUpDto.md
 docs/SignUpResponseDto.md
 docs/StopImpersonatingResponseDto.md
+docs/TimeframeMetricsDto.md
 docs/TransferResponseDto.md
 docs/TransfersApi.md
 docs/UnbanUserDto.md
@@ -145,6 +151,7 @@ docs/VerifyEmailResponseDto.md
 docs/WebhookEndpointResponseDto.md
 docs/WebhooksApi.md
 package.json
+src/apis/AnalyticsApi.ts
 src/apis/AuthenticationApi.ts
 src/apis/BalanceApi.ts
 src/apis/CheckoutsApi.ts
@@ -163,6 +170,7 @@ src/apis/index.ts
 src/index.ts
 src/models/AcceptInvitationDto.ts
 src/models/AcceptInvitationResponseDto.ts
+src/models/AnalyticsResponseDto.ts
 src/models/ApiKey.ts
 src/models/BalanceHistoryResponseDto.ts
 src/models/BalanceTransactionDto.ts
@@ -194,7 +202,9 @@ src/models/CreatePurchaseDto.ts
 src/models/CreateTransferDto.ts
 src/models/CreateWebhookEndpointDto.ts
 src/models/CustomerResponseDto.ts
+src/models/CustomerStatsDto.ts
 src/models/CustomerTransactionDto.ts
+src/models/DailyBreakdownDto.ts
 src/models/DeleteApiKeyDto.ts
 src/models/DeleteApiKeyResponseDto.ts
 src/models/DeleteOrganizationDto.ts
@@ -237,6 +247,7 @@ src/models/ListUsersResponseDto.ts
 src/models/ListWebhookEndpointsResponseDto.ts
 src/models/MemberDto.ts
 src/models/MerchantBalanceResponseDto.ts
+src/models/MetricStatsDto.ts
 src/models/OrganizationDto.ts
 src/models/PaginationResponseDto.ts
 src/models/PaymentIntentResponseDto.ts
@@ -270,6 +281,7 @@ src/models/SignOutResponseDto.ts
 src/models/SignUpDto.ts
 src/models/SignUpResponseDto.ts
 src/models/StopImpersonatingResponseDto.ts
+src/models/TimeframeMetricsDto.ts
 src/models/TransferResponseDto.ts
 src/models/UnbanUserDto.ts
 src/models/UnbanUserResponseDto.ts

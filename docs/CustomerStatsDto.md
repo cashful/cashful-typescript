@@ -1,0 +1,38 @@
+
+# CustomerStatsDto
+
+
+## Properties
+
+Name | Type
+------------ | -------------
+`daily` | number
+`weekly` | number
+`monthly` | number
+
+## Example
+
+```typescript
+import type { CustomerStatsDto } from '@cashful-co/typescript'
+
+// TODO: Update the object below with actual values
+const example = {
+  "daily": null,
+  "weekly": null,
+  "monthly": null,
+} satisfies CustomerStatsDto
+
+console.log(example)
+
+// Convert the instance to a JSON string
+const exampleJSON: string = JSON.stringify(example)
+console.log(exampleJSON)
+
+// Parse the JSON string back to an object
+const exampleParsed = JSON.parse(exampleJSON) as CustomerStatsDto
+console.log(exampleParsed)
+```
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
