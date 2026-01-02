@@ -1,28 +1,26 @@
 
-# SignInDto
+# SendSmsDto
 
 
 ## Properties
 
 Name | Type
 ------------ | -------------
-`email` | string
-`password` | string
-`callbackURL` | string
-`rememberMe` | boolean
+`to` | object
+`message` | string
+`from` | string
 
 ## Example
 
 ```typescript
-import type { SignInDto } from '@cashful-co/typescript'
+import type { SendSmsDto } from '@cashful-co/typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "email": john.doe@example.com,
-  "password": StrongPassword123!,
-  "callbackURL": https://example.com/auth/callback,
-  "rememberMe": true,
-} satisfies SignInDto
+  "to": +27123456789,
+  "message": Your verification code is: 123456,
+  "from": Cashful,
+} satisfies SendSmsDto
 
 console.log(example)
 
@@ -31,7 +29,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as SignInDto
+const exampleParsed = JSON.parse(exampleJSON) as SendSmsDto
 console.log(exampleParsed)
 ```
 

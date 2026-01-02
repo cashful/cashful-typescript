@@ -1,5 +1,5 @@
 
-# SignInDto
+# SendMultiChannelNotification200Response
 
 
 ## Properties
@@ -7,22 +7,18 @@
 Name | Type
 ------------ | -------------
 `email` | string
-`password` | string
-`callbackURL` | string
-`rememberMe` | boolean
+`sms` | string
 
 ## Example
 
 ```typescript
-import type { SignInDto } from '@cashful-co/typescript'
+import type { SendMultiChannelNotification200Response } from '@cashful-co/typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "email": john.doe@example.com,
-  "password": StrongPassword123!,
-  "callbackURL": https://example.com/auth/callback,
-  "rememberMe": true,
-} satisfies SignInDto
+  "email": null,
+  "sms": null,
+} satisfies SendMultiChannelNotification200Response
 
 console.log(example)
 
@@ -31,7 +27,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as SignInDto
+const exampleParsed = JSON.parse(exampleJSON) as SendMultiChannelNotification200Response
 console.log(exampleParsed)
 ```
 

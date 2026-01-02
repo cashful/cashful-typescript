@@ -33,8 +33,6 @@ export interface DeletePaymentMethodRequest {
 }
 
 export interface ListPaymentMethodsRequest {
-    total: number;
-    hasMore: boolean;
     merchantId: string;
     limit?: number;
     offset?: number;
@@ -106,20 +104,6 @@ export class PaymentMethodsApi extends runtime.BaseAPI {
      * List Payment Methods
      */
     async listPaymentMethodsRaw(requestParameters: ListPaymentMethodsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListPaymentMethodsResponseDto>> {
-        if (requestParameters['total'] == null) {
-            throw new runtime.RequiredError(
-                'total',
-                'Required parameter "total" was null or undefined when calling listPaymentMethods().'
-            );
-        }
-
-        if (requestParameters['hasMore'] == null) {
-            throw new runtime.RequiredError(
-                'hasMore',
-                'Required parameter "hasMore" was null or undefined when calling listPaymentMethods().'
-            );
-        }
-
         if (requestParameters['merchantId'] == null) {
             throw new runtime.RequiredError(
                 'merchantId',
@@ -135,14 +119,6 @@ export class PaymentMethodsApi extends runtime.BaseAPI {
 
         if (requestParameters['offset'] != null) {
             queryParameters['offset'] = requestParameters['offset'];
-        }
-
-        if (requestParameters['total'] != null) {
-            queryParameters['total'] = requestParameters['total'];
-        }
-
-        if (requestParameters['hasMore'] != null) {
-            queryParameters['hasMore'] = requestParameters['hasMore'];
         }
 
         if (requestParameters['merchantId'] != null) {
@@ -180,8 +156,8 @@ export class PaymentMethodsApi extends runtime.BaseAPI {
      * Lists saved payment methods for a specific customer.
      * List Payment Methods
      */
-    async listPaymentMethods(total: number, hasMore: boolean, merchantId: string, limit?: number, offset?: number, customerId?: string, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListPaymentMethodsResponseDto> {
-        const response = await this.listPaymentMethodsRaw({ total: total, hasMore: hasMore, merchantId: merchantId, limit: limit, offset: offset, customerId: customerId }, initOverrides);
+    async listPaymentMethods(merchantId: string, limit?: number, offset?: number, customerId?: string, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListPaymentMethodsResponseDto> {
+        const response = await this.listPaymentMethodsRaw({ merchantId: merchantId, limit: limit, offset: offset, customerId: customerId }, initOverrides);
         return await response.value();
     }
 

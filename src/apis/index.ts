@@ -8,6 +8,7 @@ export * from './CustomersApi';
 export * from './EventsApi';
 export * from './HealthApi';
 export * from './KYCApi';
+export * from './NotificationsApi';
 export * from './PaymentIntentsApi';
 export * from './PaymentLinksApi';
 export * from './PaymentMethodsApi';

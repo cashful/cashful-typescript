@@ -40,9 +40,9 @@ export interface CreateProductRequest {
 
 export interface ListProductsRequest {
     merchantId: string;
-    active?: boolean;
     limit?: number;
     offset?: number;
+    active?: boolean;
 }
 
 export interface UpdateProductRequest {
@@ -118,20 +118,20 @@ export class ProductsApi extends runtime.BaseAPI {
 
         const queryParameters: any = {};
 
-        if (requestParameters['active'] != null) {
-            queryParameters['active'] = requestParameters['active'];
-        }
-
-        if (requestParameters['merchantId'] != null) {
-            queryParameters['merchantId'] = requestParameters['merchantId'];
-        }
-
         if (requestParameters['limit'] != null) {
             queryParameters['limit'] = requestParameters['limit'];
         }
 
         if (requestParameters['offset'] != null) {
             queryParameters['offset'] = requestParameters['offset'];
+        }
+
+        if (requestParameters['merchantId'] != null) {
+            queryParameters['merchantId'] = requestParameters['merchantId'];
+        }
+
+        if (requestParameters['active'] != null) {
+            queryParameters['active'] = requestParameters['active'];
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -161,8 +161,8 @@ export class ProductsApi extends runtime.BaseAPI {
      * Retrieves all products in the merchant\'s catalog.
      * List Products
      */
-    async listProducts(merchantId: string, active?: boolean, limit?: number, offset?: number, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListProductsResponseDto> {
-        const response = await this.listProductsRaw({ merchantId: merchantId, active: active, limit: limit, offset: offset }, initOverrides);
+    async listProducts(merchantId: string, limit?: number, offset?: number, active?: boolean, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListProductsResponseDto> {
+        const response = await this.listProductsRaw({ merchantId: merchantId, limit: limit, offset: offset, active: active }, initOverrides);
         return await response.value();
     }
 

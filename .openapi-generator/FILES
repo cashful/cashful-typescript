@@ -121,6 +121,8 @@ docs/ListWebhookEndpointsResponseDto.md
 docs/MemberDto.md
 docs/MerchantBalanceResponseDto.md
 docs/MetricStatsDto.md
+docs/NotificationDto.md
+docs/NotificationsApi.md
 docs/OrganizationDto.md
 docs/OrganizationKycResponseDto.md
 docs/PaginationResponseDto.md
@@ -153,8 +155,13 @@ docs/ResetPhonePasswordDto.md
 docs/ResetPhonePasswordResponseDto.md
 docs/RevokeSessionDto.md
 docs/RevokeSessionResponseDto.md
+docs/SendEmail200Response.md
+docs/SendEmailDto.md
+docs/SendMultiChannelNotification200Response.md
 docs/SendPhoneOTPDto.md
 docs/SendPhoneOTPResponseDto.md
+docs/SendSms200Response.md
+docs/SendSmsDto.md
 docs/SendVerificationEmailDto.md
 docs/SendVerificationEmailResponseDto.md
 docs/SessionDto.md
@@ -209,6 +216,7 @@ src/apis/CustomersApi.ts
 src/apis/EventsApi.ts
 src/apis/HealthApi.ts
 src/apis/KYCApi.ts
+src/apis/NotificationsApi.ts
 src/apis/PaymentIntentsApi.ts
 src/apis/PaymentLinksApi.ts
 src/apis/PaymentMethodsApi.ts
@@ -331,6 +339,7 @@ src/models/ListWebhookEndpointsResponseDto.ts
 src/models/MemberDto.ts
 src/models/MerchantBalanceResponseDto.ts
 src/models/MetricStatsDto.ts
+src/models/NotificationDto.ts
 src/models/OrganizationDto.ts
 src/models/OrganizationKycResponseDto.ts
 src/models/PaginationResponseDto.ts
@@ -357,8 +366,13 @@ src/models/ResetPhonePasswordDto.ts
 src/models/ResetPhonePasswordResponseDto.ts
 src/models/RevokeSessionDto.ts
 src/models/RevokeSessionResponseDto.ts
+src/models/SendEmail200Response.ts
+src/models/SendEmailDto.ts
+src/models/SendMultiChannelNotification200Response.ts
 src/models/SendPhoneOTPDto.ts
 src/models/SendPhoneOTPResponseDto.ts
+src/models/SendSms200Response.ts
+src/models/SendSmsDto.ts
 src/models/SendVerificationEmailDto.ts
 src/models/SendVerificationEmailResponseDto.ts
 src/models/SessionDto.ts

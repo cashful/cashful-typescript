@@ -47,18 +47,22 @@ export interface GetCustomerBalanceRequest {
 
 export interface ListCustomerPaymentMethodsRequest {
     id: string;
+    limit?: number;
+    offset?: number;
 }
 
 export interface ListCustomerTransactionsRequest {
     id: string;
+    limit?: number;
+    offset?: number;
 }
 
 export interface ListCustomersRequest {
     merchantId: string;
-    search?: any;
-    email?: any;
     limit?: number;
     offset?: number;
+    email?: string;
+    search?: string;
 }
 
 export interface RetrieveCustomerRequest {
@@ -189,6 +193,14 @@ export class CustomersApi extends runtime.BaseAPI {
 
         const queryParameters: any = {};
 
+        if (requestParameters['limit'] != null) {
+            queryParameters['limit'] = requestParameters['limit'];
+        }
+
+        if (requestParameters['offset'] != null) {
+            queryParameters['offset'] = requestParameters['offset'];
+        }
+
         const headerParameters: runtime.HTTPHeaders = {};
 
         if (this.configuration && this.configuration.accessToken) {
@@ -221,8 +233,8 @@ export class CustomersApi extends runtime.BaseAPI {
      * Shows all saved payment methods (cards, etc.) for a single customer.
      * List Customer\'s Payment Methods
      */
-    async listCustomerPaymentMethods(id: string, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<any> {
-        const response = await this.listCustomerPaymentMethodsRaw({ id: id }, initOverrides);
+    async listCustomerPaymentMethods(id: string, limit?: number, offset?: number, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<any> {
+        const response = await this.listCustomerPaymentMethodsRaw({ id: id, limit: limit, offset: offset }, initOverrides);
         return await response.value();
     }
 
@@ -239,6 +251,14 @@ export class CustomersApi extends runtime.BaseAPI {
         }
 
         const queryParameters: any = {};
+
+        if (requestParameters['limit'] != null) {
+            queryParameters['limit'] = requestParameters['limit'];
+        }
+
+        if (requestParameters['offset'] != null) {
+            queryParameters['offset'] = requestParameters['offset'];
+        }
 
         const headerParameters: runtime.HTTPHeaders = {};
 
@@ -268,8 +288,8 @@ export class CustomersApi extends runtime.BaseAPI {
      * Provides the full transaction history for a single customer\'s \"cash balance\" (Pay-Ins, Purchases, Transfers).
      * List Customer\'s Cash Transactions
      */
-    async listCustomerTransactions(id: string, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListCustomerTransactionsResponseDto> {
-        const response = await this.listCustomerTransactionsRaw({ id: id }, initOverrides);
+    async listCustomerTransactions(id: string, limit?: number, offset?: number, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListCustomerTransactionsResponseDto> {
+        const response = await this.listCustomerTransactionsRaw({ id: id, limit: limit, offset: offset }, initOverrides);
         return await response.value();
     }
 
@@ -287,14 +307,6 @@ export class CustomersApi extends runtime.BaseAPI {
 
         const queryParameters: any = {};
 
-        if (requestParameters['search'] != null) {
-            queryParameters['search'] = requestParameters['search'];
-        }
-
-        if (requestParameters['email'] != null) {
-            queryParameters['email'] = requestParameters['email'];
-        }
-
         if (requestParameters['merchantId'] != null) {
             queryParameters['merchantId'] = requestParameters['merchantId'];
         }
@@ -305,6 +317,14 @@ export class CustomersApi extends runtime.BaseAPI {
 
         if (requestParameters['offset'] != null) {
             queryParameters['offset'] = requestParameters['offset'];
+        }
+
+        if (requestParameters['email'] != null) {
+            queryParameters['email'] = requestParameters['email'];
+        }
+
+        if (requestParameters['search'] != null) {
+            queryParameters['search'] = requestParameters['search'];
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -334,8 +354,8 @@ export class CustomersApi extends runtime.BaseAPI {
      * Retrieves a paginated list of all customers for the merchant.
      * List Customers
      */
-    async listCustomers(merchantId: string, search?: any, email?: any, limit?: number, offset?: number, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListCustomersResponseDto> {
-        const response = await this.listCustomersRaw({ merchantId: merchantId, search: search, email: email, limit: limit, offset: offset }, initOverrides);
+    async listCustomers(merchantId: string, limit?: number, offset?: number, email?: string, search?: string, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListCustomersResponseDto> {
+        const response = await this.listCustomersRaw({ merchantId: merchantId, limit: limit, offset: offset, email: email, search: search }, initOverrides);
         return await response.value();
     }
 

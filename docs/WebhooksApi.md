@@ -1,6 +1,6 @@
 # WebhooksApi
 
-All URIs are relative to *http://localhost:3000*
+All URIs are relative to *http://localhost:9000*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

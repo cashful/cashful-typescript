@@ -31,6 +31,18 @@ export interface SignInDto {
      * @memberof SignInDto
      */
     password: string;
+    /**
+     * The URL to use for email verification callback
+     * @type {string}
+     * @memberof SignInDto
+     */
+    callbackURL?: string;
+    /**
+     * If this is false, the session will not be remembered. Default is `true`.
+     * @type {boolean}
+     * @memberof SignInDto
+     */
+    rememberMe?: boolean;
 }
 
 /**
@@ -54,6 +66,8 @@ export function SignInDtoFromJSONTyped(json: any, ignoreDiscriminator: boolean):
         
         'email': json['email'],
         'password': json['password'],
+        'callbackURL': json['callbackURL'] == null ? undefined : json['callbackURL'],
+        'rememberMe': json['rememberMe'] == null ? undefined : json['rememberMe'],
     };
 }
 
@@ -70,6 +84,8 @@ export function SignInDtoToJSONTyped(value?: SignInDto | null, ignoreDiscriminat
         
         'email': value['email'],
         'password': value['password'],
+        'callbackURL': value['callbackURL'],
+        'rememberMe': value['rememberMe'],
     };
 }
 

@@ -36,8 +36,6 @@ export interface CreateCheckoutSessionRequest {
 }
 
 export interface ListCheckoutSessionsRequest {
-    total: number;
-    hasMore: boolean;
     merchantId: string;
     limit?: number;
     offset?: number;
@@ -107,20 +105,6 @@ export class CheckoutsApi extends runtime.BaseAPI {
      * List Checkout Sessions
      */
     async listCheckoutSessionsRaw(requestParameters: ListCheckoutSessionsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListCheckoutSessionsResponseDto>> {
-        if (requestParameters['total'] == null) {
-            throw new runtime.RequiredError(
-                'total',
-                'Required parameter "total" was null or undefined when calling listCheckoutSessions().'
-            );
-        }
-
-        if (requestParameters['hasMore'] == null) {
-            throw new runtime.RequiredError(
-                'hasMore',
-                'Required parameter "hasMore" was null or undefined when calling listCheckoutSessions().'
-            );
-        }
-
         if (requestParameters['merchantId'] == null) {
             throw new runtime.RequiredError(
                 'merchantId',
@@ -136,14 +120,6 @@ export class CheckoutsApi extends runtime.BaseAPI {
 
         if (requestParameters['offset'] != null) {
             queryParameters['offset'] = requestParameters['offset'];
-        }
-
-        if (requestParameters['total'] != null) {
-            queryParameters['total'] = requestParameters['total'];
-        }
-
-        if (requestParameters['hasMore'] != null) {
-            queryParameters['hasMore'] = requestParameters['hasMore'];
         }
 
         if (requestParameters['merchantId'] != null) {
@@ -181,8 +157,8 @@ export class CheckoutsApi extends runtime.BaseAPI {
      * Lists checkout sessions
      * List Checkout Sessions
      */
-    async listCheckoutSessions(total: number, hasMore: boolean, merchantId: string, limit?: number, offset?: number, status?: string, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListCheckoutSessionsResponseDto> {
-        const response = await this.listCheckoutSessionsRaw({ total: total, hasMore: hasMore, merchantId: merchantId, limit: limit, offset: offset, status: status }, initOverrides);
+    async listCheckoutSessions(merchantId: string, limit?: number, offset?: number, status?: string, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListCheckoutSessionsResponseDto> {
+        const response = await this.listCheckoutSessionsRaw({ merchantId: merchantId, limit: limit, offset: offset, status: status }, initOverrides);
         return await response.value();
     }
 

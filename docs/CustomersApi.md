@@ -1,6 +1,6 @@
 # CustomersApi
 
-All URIs are relative to *http://localhost:3000*
+All URIs are relative to *http://localhost:9000*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -165,7 +165,7 @@ example().catch(console.error);
 
 ## listCustomerPaymentMethods
 
-> any listCustomerPaymentMethods(id)
+> any listCustomerPaymentMethods(id, limit, offset)
 
 List Customer\&#39;s Payment Methods
 
@@ -191,6 +191,10 @@ async function example() {
   const body = {
     // string | The unique identifier of the customer
     id: id_example,
+    // number | Maximum number of records to return (optional)
+    limit: 8.14,
+    // number | Number of records to skip (optional)
+    offset: 8.14,
   } satisfies ListCustomerPaymentMethodsRequest;
 
   try {
@@ -211,6 +215,8 @@ example().catch(console.error);
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | `string` | The unique identifier of the customer | [Defaults to `undefined`] |
+| **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
+| **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 
@@ -239,7 +245,7 @@ example().catch(console.error);
 
 ## listCustomerTransactions
 
-> ListCustomerTransactionsResponseDto listCustomerTransactions(id)
+> ListCustomerTransactionsResponseDto listCustomerTransactions(id, limit, offset)
 
 List Customer\&#39;s Cash Transactions
 
@@ -265,6 +271,10 @@ async function example() {
   const body = {
     // string | The unique identifier of the customer
     id: id_example,
+    // number | Maximum number of records to return (optional)
+    limit: 8.14,
+    // number | Number of records to skip (optional)
+    offset: 8.14,
   } satisfies ListCustomerTransactionsRequest;
 
   try {
@@ -285,6 +295,8 @@ example().catch(console.error);
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | `string` | The unique identifier of the customer | [Defaults to `undefined`] |
+| **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
+| **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 
@@ -313,7 +325,7 @@ example().catch(console.error);
 
 ## listCustomers
 
-> ListCustomersResponseDto listCustomers(merchantId, search, email, limit, offset)
+> ListCustomersResponseDto listCustomers(merchantId, limit, offset, email, search)
 
 List Customers
 
@@ -339,14 +351,14 @@ async function example() {
   const body = {
     // string | The ID of the merchant. This parameter is required.
     merchantId: merchantId_example,
-    // any | Search across customer fields (optional)
-    search: ...,
-    // any | Filter by email address (optional)
-    email: ...,
     // number | Maximum number of records to return (optional)
     limit: 8.14,
     // number | Number of records to skip (optional)
     offset: 8.14,
+    // string | Filter by email address (optional)
+    email: email_example,
+    // string | Search across customer fields (optional)
+    search: search_example,
   } satisfies ListCustomersRequest;
 
   try {
@@ -367,10 +379,10 @@ example().catch(console.error);
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **merchantId** | `string` | The ID of the merchant. This parameter is required. | [Defaults to `undefined`] |
-| **search** | `any` | Search across customer fields | [Optional] [Defaults to `undefined`] |
-| **email** | `any` | Filter by email address | [Optional] [Defaults to `undefined`] |
 | **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
 | **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
+| **email** | `string` | Filter by email address | [Optional] [Defaults to `undefined`] |
+| **search** | `string` | Search across customer fields | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 

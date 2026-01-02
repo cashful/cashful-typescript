@@ -1,6 +1,6 @@
 # BalanceApi
 
-All URIs are relative to *http://localhost:3000*
+All URIs are relative to *http://localhost:9000*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -125,8 +125,8 @@ async function example() {
   const api = new BalanceApi(config);
 
   const body = {
-    // string | The unique identifier of the merchant
-    merchantId: merchant_123,
+    // string | The ID of the merchant whose balance is being requested.
+    merchantId: merchantId_example,
   } satisfies GetMerchantBalanceRequest;
 
   try {
@@ -146,7 +146,7 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **merchantId** | `string` | The unique identifier of the merchant | [Defaults to `undefined`] |
+| **merchantId** | `string` | The ID of the merchant whose balance is being requested. | [Defaults to `undefined`] |
 
 ### Return type
 

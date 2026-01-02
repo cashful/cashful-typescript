@@ -1,6 +1,6 @@
 # CheckoutsApi
 
-All URIs are relative to *http://localhost:3000*
+All URIs are relative to *http://localhost:9000*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -86,7 +86,7 @@ example().catch(console.error);
 
 ## listCheckoutSessions
 
-> ListCheckoutSessionsResponseDto listCheckoutSessions(total, hasMore, merchantId, limit, offset, status)
+> ListCheckoutSessionsResponseDto listCheckoutSessions(merchantId, limit, offset, status)
 
 List Checkout Sessions
 
@@ -110,10 +110,6 @@ async function example() {
   const api = new CheckoutsApi(config);
 
   const body = {
-    // number | Total number of items available
-    total: 150,
-    // boolean | Whether there are more items available beyond this response
-    hasMore: true,
     // string | The ID of the merchant. This parameter is required.
     merchantId: merchantId_example,
     // number | Maximum number of records to return (optional)
@@ -141,8 +137,6 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **total** | `number` | Total number of items available | [Defaults to `undefined`] |
-| **hasMore** | `boolean` | Whether there are more items available beyond this response | [Defaults to `undefined`] |
 | **merchantId** | `string` | The ID of the merchant. This parameter is required. | [Defaults to `undefined`] |
 | **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
 | **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
@@ -241,7 +235,6 @@ example().catch(console.error);
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successfully retrieved checkout session |  -  |
-| **401** | Unauthorized |  -  |
 | **404** | Resource not found |  -  |
 | **500** | Internal server error |  -  |
 
