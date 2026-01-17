@@ -245,7 +245,7 @@ example().catch(console.error);
 
 ## updateProduct
 
-> any updateProduct(id, updateProductDto)
+> ProductResponseDto updateProduct(id, updateProductDto)
 
 Update Product
 
@@ -297,7 +297,7 @@ example().catch(console.error);
 
 ### Return type
 
-**any**
+[**ProductResponseDto**](ProductResponseDto.md)
 
 ### Authorization
 

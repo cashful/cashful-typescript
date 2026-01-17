@@ -91,7 +91,7 @@ example().catch(console.error);
 
 ## getCustomerBalance
 
-> any getCustomerBalance(id)
+> CustomerBalanceDto getCustomerBalance(id)
 
 Get Customer\&#39;s Cash Balance
 
@@ -140,7 +140,7 @@ example().catch(console.error);
 
 ### Return type
 
-**any**
+[**CustomerBalanceDto**](CustomerBalanceDto.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ example().catch(console.error);
 
 ## listCustomerPaymentMethods
 
-> any listCustomerPaymentMethods(id, limit, offset)
+> ListCustomerPaymentMethodsResponseDto listCustomerPaymentMethods(id, limit, offset)
 
 List Customer\&#39;s Payment Methods
 
@@ -220,7 +220,7 @@ example().catch(console.error);
 
 ### Return type
 
-**any**
+[**ListCustomerPaymentMethodsResponseDto**](ListCustomerPaymentMethodsResponseDto.md)
 
 ### Authorization
 
@@ -412,7 +412,7 @@ example().catch(console.error);
 
 ## retrieveCustomer
 
-> any retrieveCustomer(id)
+> CustomerResponseDto retrieveCustomer(id)
 
 Retrieve Customer
 
@@ -461,7 +461,7 @@ example().catch(console.error);
 
 ### Return type
 
-**any**
+[**CustomerResponseDto**](CustomerResponseDto.md)
 
 ### Authorization
 
@@ -486,7 +486,7 @@ example().catch(console.error);
 
 ## updateCustomer
 
-> any updateCustomer(id, updateCustomerDto)
+> CustomerResponseDto updateCustomer(id, updateCustomerDto)
 
 Update Customer
 
@@ -538,7 +538,7 @@ example().catch(console.error);
 
 ### Return type
 
-**any**
+[**CustomerResponseDto**](CustomerResponseDto.md)
 
 ### Authorization
 

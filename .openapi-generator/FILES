@@ -59,6 +59,8 @@ docs/CreateProductDto.md
 docs/CreatePurchaseDto.md
 docs/CreateTransferDto.md
 docs/CreateWebhookEndpointDto.md
+docs/CustomerBalanceDto.md
+docs/CustomerPaymentMethodDto.md
 docs/CustomerResponseDto.md
 docs/CustomerStatsDto.md
 docs/CustomerTransactionDto.md
@@ -108,6 +110,7 @@ docs/LinkSocialResponseDto.md
 docs/ListAccountsResponseDto.md
 docs/ListApiKeysResponseDto.md
 docs/ListCheckoutSessionsResponseDto.md
+docs/ListCustomerPaymentMethodsResponseDto.md
 docs/ListCustomerTransactionsResponseDto.md
 docs/ListCustomersResponseDto.md
 docs/ListEventsResponseDto.md
@@ -289,6 +292,8 @@ src/models/CreateProductDto.ts
 src/models/CreatePurchaseDto.ts
 src/models/CreateTransferDto.ts
 src/models/CreateWebhookEndpointDto.ts
+src/models/CustomerBalanceDto.ts
+src/models/CustomerPaymentMethodDto.ts
 src/models/CustomerResponseDto.ts
 src/models/CustomerStatsDto.ts
 src/models/CustomerTransactionDto.ts
@@ -335,6 +340,7 @@ src/models/LinkSocialResponseDto.ts
 src/models/ListAccountsResponseDto.ts
 src/models/ListApiKeysResponseDto.ts
 src/models/ListCheckoutSessionsResponseDto.ts
+src/models/ListCustomerPaymentMethodsResponseDto.ts
 src/models/ListCustomerTransactionsResponseDto.ts
 src/models/ListCustomersResponseDto.ts
 src/models/ListEventsResponseDto.ts
