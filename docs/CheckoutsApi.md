@@ -24,11 +24,11 @@ Creates a hosted payment page. Used for: (1) A standard e-commerce purchase, or 
 import {
   Configuration,
   CheckoutsApi,
-} from '@cashful-co/typescript';
-import type { CreateCheckoutSessionRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CreateCheckoutSessionRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -98,11 +98,11 @@ Lists checkout sessions
 import {
   Configuration,
   CheckoutsApi,
-} from '@cashful-co/typescript';
-import type { ListCheckoutSessionsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListCheckoutSessionsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -182,11 +182,11 @@ Retrieves details of a specific checkout session
 import {
   Configuration,
   CheckoutsApi,
-} from '@cashful-co/typescript';
-import type { RetrieveCheckoutSessionRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { RetrieveCheckoutSessionRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

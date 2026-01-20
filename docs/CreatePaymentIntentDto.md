@@ -20,7 +20,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { CreatePaymentIntentDto } from '@cashful-co/typescript'
+import type { CreatePaymentIntentDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {

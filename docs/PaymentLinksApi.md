@@ -25,11 +25,11 @@ Creates a re-usable hosted link. Can be used for: (1) Selling a product, or (2) 
 import {
   Configuration,
   PaymentLinksApi,
-} from '@cashful-co/typescript';
-import type { CreatePaymentLinkRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CreatePaymentLinkRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -99,11 +99,11 @@ Retrieves all payment links created by the merchant.
 import {
   Configuration,
   PaymentLinksApi,
-} from '@cashful-co/typescript';
-import type { ListPaymentLinksRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListPaymentLinksRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -183,11 +183,11 @@ Retrieves a single payment link by ID.
 import {
   Configuration,
   PaymentLinksApi,
-} from '@cashful-co/typescript';
-import type { RetrievePaymentLinkRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { RetrievePaymentLinkRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -256,11 +256,11 @@ Updates a link\&#39;s details, most commonly to set active: false.
 import {
   Configuration,
   PaymentLinksApi,
-} from '@cashful-co/typescript';
-import type { UpdatePaymentLinkRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { UpdatePaymentLinkRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

@@ -22,11 +22,11 @@ Retrieves a log of all API events for debugging and logging.
 import {
   Configuration,
   EventsApi,
-} from '@cashful-co/typescript';
-import type { ListEventsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListEventsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

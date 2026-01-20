@@ -14,7 +14,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { LineItemDto } from '@cashful-co/typescript'
+import type { LineItemDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {

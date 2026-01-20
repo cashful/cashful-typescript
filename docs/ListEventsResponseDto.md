@@ -12,7 +12,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { ListEventsResponseDto } from '@cashful-co/typescript'
+import type { ListEventsResponseDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {

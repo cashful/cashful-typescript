@@ -11,7 +11,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { AdminRevokeUserSessionResponseDto } from '@cashful-co/typescript'
+import type { AdminRevokeUserSessionResponseDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {

@@ -13,7 +13,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { SendSmsDto } from '@cashful-co/typescript'
+import type { SendSmsDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {

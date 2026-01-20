@@ -25,11 +25,11 @@ Confirm that a file upload was completed
 import {
   Configuration,
   StorageApi,
-} from '@cashful-co/typescript';
-import type { StorageControllerConfirmUploadCanaryRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { StorageControllerConfirmUploadCanaryRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -98,11 +98,11 @@ Delete a file
 import {
   Configuration,
   StorageApi,
-} from '@cashful-co/typescript';
-import type { StorageControllerDeleteCanaryRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { StorageControllerDeleteCanaryRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -171,11 +171,11 @@ Get a presigned download URL for a file
 import {
   Configuration,
   StorageApi,
-} from '@cashful-co/typescript';
-import type { StorageControllerGetDownloadUrlCanaryRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { StorageControllerGetDownloadUrlCanaryRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -244,11 +244,11 @@ List files
 import {
   Configuration,
   StorageApi,
-} from '@cashful-co/typescript';
-import type { StorageControllerListCanaryRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { StorageControllerListCanaryRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -335,11 +335,11 @@ Request a presigned URL for file upload
 import {
   Configuration,
   StorageApi,
-} from '@cashful-co/typescript';
-import type { StorageControllerRequestUploadUrlCanaryRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { StorageControllerRequestUploadUrlCanaryRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -408,11 +408,11 @@ Get file details
 import {
   Configuration,
   StorageApi,
-} from '@cashful-co/typescript';
-import type { StorageControllerRetrieveCanaryRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { StorageControllerRetrieveCanaryRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

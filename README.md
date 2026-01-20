@@ -1,4 +1,4 @@
-# @cashful-co/typescript@0.6.2
+# @cashful/typescript@0.6.2
 
 A TypeScript SDK client for the api.cashful.africa API.
 
@@ -7,7 +7,7 @@ A TypeScript SDK client for the api.cashful.africa API.
 First, install the SDK from npm.
 
 ```bash
-npm install @cashful-co/typescript --save
+npm install @cashful/typescript --save
 ```
 
 Next, try it out.
@@ -17,11 +17,11 @@ Next, try it out.
 import {
   Configuration,
   AnalyticsApi,
-} from '@cashful-co/typescript';
-import type { GetAnalyticsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetAnalyticsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

@@ -26,11 +26,11 @@ Cancels a payment intent that has not yet succeeded or failed.
 import {
   Configuration,
   PaymentIntentsApi,
-} from '@cashful-co/typescript';
-import type { CancelPaymentIntentRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CancelPaymentIntentRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -101,11 +101,11 @@ Confirms a payment intent that requires confirmation. This initiates the actual 
 import {
   Configuration,
   PaymentIntentsApi,
-} from '@cashful-co/typescript';
-import type { ConfirmPaymentIntentRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ConfirmPaymentIntentRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -176,11 +176,11 @@ Creates a payment intent for off-session charges. Used for subscriptions, recurr
 import {
   Configuration,
   PaymentIntentsApi,
-} from '@cashful-co/typescript';
-import type { CreatePaymentIntentRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CreatePaymentIntentRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -252,11 +252,11 @@ Lists payment intents for a specific merchant with pagination and filtering.
 import {
   Configuration,
   PaymentIntentsApi,
-} from '@cashful-co/typescript';
-import type { ListPaymentIntentsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListPaymentIntentsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -334,11 +334,11 @@ Retrieves the current state of a specific payment intent.
 import {
   Configuration,
   PaymentIntentsApi,
-} from '@cashful-co/typescript';
-import type { RetrievePaymentIntentRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { RetrievePaymentIntentRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

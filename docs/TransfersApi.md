@@ -22,11 +22,11 @@ Create P2P Transfer
 import {
   Configuration,
   TransfersApi,
-} from '@cashful-co/typescript';
-import type { CreateTransferRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CreateTransferRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

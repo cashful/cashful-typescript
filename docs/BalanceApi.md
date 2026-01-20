@@ -23,11 +23,11 @@ A full ledger of all transactions, fees, and payouts for the merchant\&#39;s mas
 import {
   Configuration,
   BalanceApi,
-} from '@cashful-co/typescript';
-import type { GetBalanceHistoryRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetBalanceHistoryRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -113,11 +113,11 @@ Retrieves the merchant\&#39;s own master balance (their earnings) available for 
 import {
   Configuration,
   BalanceApi,
-} from '@cashful-co/typescript';
-import type { GetMerchantBalanceRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetMerchantBalanceRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

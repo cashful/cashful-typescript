@@ -23,11 +23,11 @@ Allows the merchant to move funds from their MerchantBalance (their earnings) to
 import {
   Configuration,
   PayoutsApi,
-} from '@cashful-co/typescript';
-import type { CreatePayoutRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CreatePayoutRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -98,11 +98,11 @@ Retrieves a list of all historical and pending payouts for the merchant.
 import {
   Configuration,
   PayoutsApi,
-} from '@cashful-co/typescript';
-import type { ListPayoutsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListPayoutsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

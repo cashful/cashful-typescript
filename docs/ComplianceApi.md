@@ -22,11 +22,11 @@ Create Compliance info
 import {
   Configuration,
   ComplianceApi,
-} from '@cashful-co/typescript';
-import type { CreateComplianceRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CreateComplianceRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -94,11 +94,11 @@ Get Compliance info for organization
 import {
   Configuration,
   ComplianceApi,
-} from '@cashful-co/typescript';
-import type { GetComplianceRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetComplianceRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -165,11 +165,11 @@ Update Compliance info
 import {
   Configuration,
   ComplianceApi,
-} from '@cashful-co/typescript';
-import type { UpdateComplianceRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { UpdateComplianceRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

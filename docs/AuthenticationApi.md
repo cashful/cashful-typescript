@@ -79,11 +79,11 @@ Accept an invitation to an organization
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { AcceptInvitationRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { AcceptInvitationRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -153,11 +153,11 @@ Cancel an invitation to an organization
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { CancelInvitationRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CancelInvitationRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -227,11 +227,11 @@ Change the email address of the current user
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ChangeEmailRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ChangeEmailRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -301,11 +301,11 @@ Change the password of the current user
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ChangePasswordRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ChangePasswordRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -375,11 +375,11 @@ Check if organization slug is available
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { CheckSlugRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CheckSlugRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -449,11 +449,11 @@ Create a new API key
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { CreateApiKeyRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CreateApiKeyRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -523,11 +523,11 @@ Create a new organization
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { CreateOrganizationRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CreateOrganizationRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -597,11 +597,11 @@ Delete an API key
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { DeleteApiKeyRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { DeleteApiKeyRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -671,11 +671,11 @@ Delete an organization
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { DeleteOrganizationRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { DeleteOrganizationRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -745,11 +745,11 @@ Delete the current user\&#39;s account
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { DeleteUserRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { DeleteUserRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -819,11 +819,11 @@ Send a password reset email to the user
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ForgetPasswordRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ForgetPasswordRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -888,11 +888,11 @@ Get current access token
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { GetAccessTokenRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetAccessTokenRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -962,11 +962,11 @@ Get the member details of the active organization
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { GetActiveMemberRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetActiveMemberRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1035,11 +1035,11 @@ Get the role of the current user in the active organization
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { GetActiveMemberRoleRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetActiveMemberRoleRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1108,11 +1108,11 @@ Retrieve a specific API key by ID
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { GetApiKeyRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetApiKeyRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1182,11 +1182,11 @@ Get an invitation by ID
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { GetInvitationRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetInvitationRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1255,11 +1255,11 @@ Get the full organization details
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { GetOrganizationRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetOrganizationRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1328,11 +1328,11 @@ Retrieve the current user session
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { GetSessionRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetSessionRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1393,11 +1393,11 @@ Check if a user has permission
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { HasPermissionRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { HasPermissionRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1467,11 +1467,11 @@ Invite a user to an organization
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { InviteMemberRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { InviteMemberRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1541,11 +1541,11 @@ Check if username is available for signup
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { IsUsernameAvailableRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { IsUsernameAvailableRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -1610,11 +1610,11 @@ Leave an organization
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { LeaveOrganizationRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { LeaveOrganizationRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1684,11 +1684,11 @@ Link a social account to existing user
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { LinkSocialRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { LinkSocialRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1758,11 +1758,11 @@ List all linked social accounts
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ListAccountsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListAccountsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1823,11 +1823,11 @@ List all API keys for the current user
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ListApiKeysRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListApiKeysRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1888,11 +1888,11 @@ List all members of an organization
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ListMembersRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListMembersRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -1961,11 +1961,11 @@ List all invitations a user has received
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ListOrganizationInvitationsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListOrganizationInvitationsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -2034,11 +2034,11 @@ List all organizations for the current user
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ListOrganizationsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListOrganizationsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -2107,11 +2107,11 @@ List all invitations a user has received
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ListUserInvitationsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListUserInvitationsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -2180,11 +2180,11 @@ List all active sessions for the user
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ListUserSessionsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListUserSessionsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -2245,11 +2245,11 @@ Check if the authentication API is working
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { OkRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { OkRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   try {
@@ -2308,11 +2308,11 @@ Refresh authentication token
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { RefreshTokenRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { RefreshTokenRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -2382,11 +2382,11 @@ Reject an invitation to an organization
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { RejectInvitationRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { RejectInvitationRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -2456,11 +2456,11 @@ Remove a member from an organization
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { RemoveMemberRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { RemoveMemberRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -2530,11 +2530,11 @@ Send a password reset email to the user
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { RequestPasswordResetRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { RequestPasswordResetRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -2599,11 +2599,11 @@ Request password reset via phone number
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { RequestPhonePasswordResetRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { RequestPhonePasswordResetRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -2668,11 +2668,11 @@ Reset the user\&#39;s password using a token
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ResetPasswordRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ResetPasswordRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -2737,11 +2737,11 @@ Redirects user to callback URL with token
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ResetPasswordCallbackRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ResetPasswordCallbackRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -2809,11 +2809,11 @@ Reset password using phone verification
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { ResetPhonePasswordRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ResetPhonePasswordRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -2878,11 +2878,11 @@ Revoke all sessions except the current one
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { RevokeOtherSessionsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { RevokeOtherSessionsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -2944,11 +2944,11 @@ Revoke a specific session
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { RevokeSessionRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { RevokeSessionRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -3018,11 +3018,11 @@ Revoke all sessions for the current user
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { RevokeSessionsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { RevokeSessionsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -3084,11 +3084,11 @@ Send one-time password to phone number
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { SendPhoneOTPRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { SendPhoneOTPRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -3153,11 +3153,11 @@ Send a verification email to the user
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { SendVerificationEmailRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { SendVerificationEmailRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -3222,11 +3222,11 @@ Set the active organization for the current session
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { SetActiveOrganizationRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { SetActiveOrganizationRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -3296,11 +3296,11 @@ Authenticate a user using email and password
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { SignInEmailRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { SignInEmailRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -3365,11 +3365,11 @@ Sign in using phone number and password
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { SignInPhoneNumberRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { SignInPhoneNumberRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -3434,11 +3434,11 @@ Sign out the current user and invalidate the session
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { SignOutRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { SignOutRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -3507,11 +3507,11 @@ Create a new user account using email and password
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { SignUpEmailRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { SignUpEmailRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -3576,11 +3576,11 @@ Sign in with a social provider (OAuth, etc.)
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { SocialSignInRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { SocialSignInRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -3645,11 +3645,11 @@ Unlink a social account from user
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { UnlinkAccountRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { UnlinkAccountRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -3719,11 +3719,11 @@ Update an API key
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { UpdateApiKeyRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { UpdateApiKeyRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -3793,11 +3793,11 @@ Update a member\&#39;s role in an organization
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { UpdateMemberRoleRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { UpdateMemberRoleRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -3867,11 +3867,11 @@ Update an organization\&#39;s details
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { UpdateOrganizationRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { UpdateOrganizationRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -3941,11 +3941,11 @@ Update the current user\&#39;s information
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { UpdateUserRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { UpdateUserRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -4015,11 +4015,11 @@ Verify an API key
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { VerifyApiKeyRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { VerifyApiKeyRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -4084,11 +4084,11 @@ Verify the email of a user
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { VerifyEmailRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { VerifyEmailRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {
@@ -4156,11 +4156,11 @@ Verify phone number with OTP code
 import {
   Configuration,
   AuthenticationApi,
-} from '@cashful-co/typescript';
-import type { VerifyPhoneNumberRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { VerifyPhoneNumberRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new AuthenticationApi();
 
   const body = {

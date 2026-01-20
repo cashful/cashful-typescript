@@ -23,11 +23,11 @@ Send an email notification
 import {
   Configuration,
   NotificationsApi,
-} from '@cashful-co/typescript';
-import type { SendEmailRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { SendEmailRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new NotificationsApi();
 
   const body = {
@@ -90,11 +90,11 @@ Send notifications via multiple channels
 import {
   Configuration,
   NotificationsApi,
-} from '@cashful-co/typescript';
-import type { SendMultiChannelNotificationRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { SendMultiChannelNotificationRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new NotificationsApi();
 
   try {
@@ -147,11 +147,11 @@ Send a notification via specified channel
 import {
   Configuration,
   NotificationsApi,
-} from '@cashful-co/typescript';
-import type { SendNotificationRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { SendNotificationRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new NotificationsApi();
 
   const body = {
@@ -214,11 +214,11 @@ Send an SMS notification
 import {
   Configuration,
   NotificationsApi,
-} from '@cashful-co/typescript';
-import type { SendSmsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { SendSmsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new NotificationsApi();
 
   const body = {

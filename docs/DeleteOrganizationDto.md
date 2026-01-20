@@ -11,7 +11,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { DeleteOrganizationDto } from '@cashful-co/typescript'
+import type { DeleteOrganizationDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {

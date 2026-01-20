@@ -23,11 +23,11 @@ Retrieves transaction volume and customer growth metrics for the merchant.
 import {
   Configuration,
   AnalyticsApi,
-} from '@cashful-co/typescript';
-import type { GetAnalyticsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetAnalyticsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -97,11 +97,11 @@ Retrieves a quick summary of key metrics for the merchant.
 import {
   Configuration,
   AnalyticsApi,
-} from '@cashful-co/typescript';
-import type { GetAnalyticsSummaryRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { GetAnalyticsSummaryRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

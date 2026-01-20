@@ -24,11 +24,11 @@ Registers a URL to receive real-time events (e.g., checkout.session.completed, p
 import {
   Configuration,
   WebhooksApi,
-} from '@cashful-co/typescript';
-import type { CreateWebhookEndpointRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CreateWebhookEndpointRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -98,11 +98,11 @@ Stops sending events to a specific URL.
 import {
   Configuration,
   WebhooksApi,
-} from '@cashful-co/typescript';
-import type { DeleteWebhookEndpointRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { DeleteWebhookEndpointRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
@@ -172,11 +172,11 @@ Lists all configured webhook endpoints.
 import {
   Configuration,
   WebhooksApi,
-} from '@cashful-co/typescript';
-import type { ListWebhookEndpointsRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { ListWebhookEndpointsRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",

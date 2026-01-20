@@ -12,7 +12,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { AdminSetUserPasswordDto } from '@cashful-co/typescript'
+import type { AdminSetUserPasswordDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {

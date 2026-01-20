@@ -12,7 +12,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { VerifyPhoneNumberDto } from '@cashful-co/typescript'
+import type { VerifyPhoneNumberDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {

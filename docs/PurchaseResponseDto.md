@@ -21,7 +21,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { PurchaseResponseDto } from '@cashful-co/typescript'
+import type { PurchaseResponseDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {

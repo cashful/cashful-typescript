@@ -22,11 +22,11 @@ Performs a health check on the application and external dependencies
 import {
   Configuration,
   HealthApi,
-} from '@cashful-co/typescript';
-import type { CheckHealthRequest } from '@cashful-co/typescript';
+} from '@cashful/typescript';
+import type { CheckHealthRequest } from '@cashful/typescript';
 
 async function example() {
-  console.log("🚀 Testing @cashful-co/typescript SDK...");
+  console.log("🚀 Testing @cashful/typescript SDK...");
   const api = new HealthApi();
 
   try {
