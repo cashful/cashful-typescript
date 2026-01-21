@@ -37,9 +37,9 @@ async function example() {
     // string | The ID of the merchant. This parameter is required.
     merchantId: merchantId_example,
     // number | Maximum number of records to return (optional)
-    limit: 8.14,
+    limit: 50,
     // number | Number of records to skip (optional)
-    offset: 8.14,
+    offset: 0,
     // string | Filter by event type (optional)
     type: type_example,
     // 'pending' | 'delivered' | 'failed' | Filter by event status (optional)

@@ -118,11 +118,13 @@ docs/ListFilesResponseDto.md
 docs/ListInvitationsResponseDto.md
 docs/ListMembersResponseDto.md
 docs/ListOrganizationComplianceResponseDto.md
+docs/ListPaymentIntentsResponseDto.md
 docs/ListPaymentLinksResponseDto.md
 docs/ListPaymentMethodsResponseDto.md
 docs/ListPayoutsResponseDto.md
 docs/ListProductsResponseDto.md
 docs/ListSessionsResponseDto.md
+docs/ListTransfersResponseDto.md
 docs/ListUserInvitationsResponseDto.md
 docs/ListUsersResponseDto.md
 docs/ListWebhookEndpointsResponseDto.md
@@ -348,11 +350,13 @@ src/models/ListFilesResponseDto.ts
 src/models/ListInvitationsResponseDto.ts
 src/models/ListMembersResponseDto.ts
 src/models/ListOrganizationComplianceResponseDto.ts
+src/models/ListPaymentIntentsResponseDto.ts
 src/models/ListPaymentLinksResponseDto.ts
 src/models/ListPaymentMethodsResponseDto.ts
 src/models/ListPayoutsResponseDto.ts
 src/models/ListProductsResponseDto.ts
 src/models/ListSessionsResponseDto.ts
+src/models/ListTransfersResponseDto.ts
 src/models/ListUserInvitationsResponseDto.ts
 src/models/ListUsersResponseDto.ts
 src/models/ListWebhookEndpointsResponseDto.ts

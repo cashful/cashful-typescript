@@ -240,7 +240,7 @@ example().catch(console.error);
 
 ## listPaymentIntents
 
-> listPaymentIntents(merchantId, limit, offset, status)
+> ListPaymentIntentsResponseDto listPaymentIntents(merchantId, limit, offset, status)
 
 List Payment Intents
 
@@ -298,7 +298,7 @@ example().catch(console.error);
 
 ### Return type
 
-`void` (Empty response body)
+[**ListPaymentIntentsResponseDto**](ListPaymentIntentsResponseDto.md)
 
 ### Authorization
 
