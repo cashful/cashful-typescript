@@ -349,7 +349,7 @@ async function example() {
   const api = new CustomersApi(config);
 
   const body = {
-    // string | The ID of the merchant. This parameter is required.
+    // string | The ID of the merchant whose balance is being requested. If omitted, defaults to the authenticated merchant. (optional)
     merchantId: merchantId_example,
     // number | Maximum number of records to return (optional)
     limit: 8.14,
@@ -378,7 +378,7 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **merchantId** | `string` | The ID of the merchant. This parameter is required. | [Defaults to `undefined`] |
+| **merchantId** | `string` | The ID of the merchant whose balance is being requested. If omitted, defaults to the authenticated merchant. | [Optional] [Defaults to `undefined`] |
 | **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
 | **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
 | **email** | `string` | Filter by email address | [Optional] [Defaults to `undefined`] |

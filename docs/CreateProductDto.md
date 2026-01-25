@@ -12,6 +12,7 @@ Name | Type
 `amount` | number
 `currency` | string
 `active` | boolean
+`imageId` | string
 `metadata` | { [key: string]: any; }
 
 ## Example
@@ -27,6 +28,7 @@ const example = {
   "amount": null,
   "currency": null,
   "active": null,
+  "imageId": null,
   "metadata": {"sku":"PROD-001","category":"electronics"},
 } satisfies CreateProductDto
 

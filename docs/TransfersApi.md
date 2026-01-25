@@ -87,7 +87,7 @@ example().catch(console.error);
 
 ## listTransfers
 
-> ListTransfersResponseDto listTransfers(merchantId, limit, offset)
+> ListTransfersResponseDto listTransfers(limit, offset, merchantId)
 
 List Transfers
 
@@ -111,12 +111,12 @@ async function example() {
   const api = new TransfersApi(config);
 
   const body = {
-    // string | Filter by merchant ID
-    merchantId: merchantId_example,
     // number | Maximum number of items to return (optional)
     limit: 50,
     // number | Number of items to skip (optional)
     offset: 0,
+    // string | Filter by merchant ID. If omitted, defaults to the authenticated merchant. (optional)
+    merchantId: merchantId_example,
   } satisfies ListTransfersRequest;
 
   try {
@@ -136,9 +136,9 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **merchantId** | `string` | Filter by merchant ID | [Defaults to `undefined`] |
 | **limit** | `number` | Maximum number of items to return | [Optional] [Defaults to `undefined`] |
 | **offset** | `number` | Number of items to skip | [Optional] [Defaults to `undefined`] |
+| **merchantId** | `string` | Filter by merchant ID. If omitted, defaults to the authenticated merchant. | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 

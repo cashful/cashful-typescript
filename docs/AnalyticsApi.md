@@ -35,7 +35,7 @@ async function example() {
   const api = new AnalyticsApi(config);
 
   const body = {
-    // string | The unique identifier of the merchant
+    // string | The unique identifier of the merchant. If not provided, defaults to the authenticated user\'s active organization. (optional)
     merchantId: merchant_123,
   } satisfies GetAnalyticsRequest;
 
@@ -56,7 +56,7 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **merchantId** | `string` | The unique identifier of the merchant | [Defaults to `undefined`] |
+| **merchantId** | `string` | The unique identifier of the merchant. If not provided, defaults to the authenticated user\&#39;s active organization. | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 
@@ -109,7 +109,7 @@ async function example() {
   const api = new AnalyticsApi(config);
 
   const body = {
-    // string | The unique identifier of the merchant
+    // string | The unique identifier of the merchant. If not provided, defaults to the authenticated user\'s active organization. (optional)
     merchantId: merchant_123,
   } satisfies GetAnalyticsSummaryRequest;
 
@@ -130,7 +130,7 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **merchantId** | `string` | The unique identifier of the merchant | [Defaults to `undefined`] |
+| **merchantId** | `string` | The unique identifier of the merchant. If not provided, defaults to the authenticated user\&#39;s active organization. | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 

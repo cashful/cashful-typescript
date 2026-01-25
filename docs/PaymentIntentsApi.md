@@ -264,7 +264,7 @@ async function example() {
   const api = new PaymentIntentsApi(config);
 
   const body = {
-    // string | Filter by merchant ID
+    // string | The ID of the merchant. If omitted, defaults to the authenticated merchant. (optional)
     merchantId: merchantId_example,
     // number | Maximum number of records to return (optional)
     limit: 8.14,
@@ -291,7 +291,7 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **merchantId** | `string` | Filter by merchant ID | [Defaults to `undefined`] |
+| **merchantId** | `string` | The ID of the merchant. If omitted, defaults to the authenticated merchant. | [Optional] [Defaults to `undefined`] |
 | **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `50`] |
 | **offset** | `number` | Number of records to skip | [Optional] [Defaults to `0`] |
 | **status** | `initiation`, `requires_payment_method`, `requires_confirmation`, `requires_action`, `processing`, `requires_capture`, `succeeded`, `failed`, `canceled` | Filter by status | [Optional] [Defaults to `undefined`] [Enum: initiation, requires_payment_method, requires_confirmation, requires_action, processing, requires_capture, succeeded, failed, canceled] |

@@ -10,6 +10,7 @@ Name | Type
 `description` | string
 `amount` | number
 `active` | boolean
+`imageId` | string
 `metadata` | { [key: string]: any; }
 
 ## Example
@@ -23,6 +24,7 @@ const example = {
   "description": null,
   "amount": null,
   "active": null,
+  "imageId": null,
   "metadata": {"sku":"PROD-001"},
 } satisfies UpdateProductDto
 

@@ -234,7 +234,7 @@ example().catch(console.error);
 
 ## storageControllerListCanary
 
-> ListFilesResponseDto storageControllerListCanary(merchantId, limit, offset, tag, status, relatedEntityId, relatedEntityType)
+> ListFilesResponseDto storageControllerListCanary(limit, offset, tag, status, relatedEntityId, relatedEntityType)
 
 List files
 
@@ -256,8 +256,6 @@ async function example() {
   const api = new StorageApi(config);
 
   const body = {
-    // string | The ID of the merchant. This parameter is required.
-    merchantId: merchantId_example,
     // number | Maximum number of records to return (optional)
     limit: 50,
     // number | Number of records to skip (optional)
@@ -289,7 +287,6 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **merchantId** | `string` | The ID of the merchant. This parameter is required. | [Defaults to `undefined`] |
 | **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
 | **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
 | **tag** | `string` | Filter by tag | [Optional] [Defaults to `undefined`] |
@@ -348,7 +345,7 @@ async function example() {
 
   const body = {
     // RequestUploadUrlDto
-    requestUploadUrlDto: {"filename":"identity-document.pdf","mimeType":"application/pdf","tags":["compliance","identity-document"],"relatedEntityId":"compliance_info_123","relatedEntityType":"complianceInfo"},
+    requestUploadUrlDto: {"filename":"iphone-15.png","mimeType":"image/png","isPublic":true,"tags":["product","image"],"relatedEntityId":"product_123","relatedEntityType":"product"},
   } satisfies StorageControllerRequestUploadUrlCanaryRequest;
 
   try {

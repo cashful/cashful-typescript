@@ -11,6 +11,7 @@ Name | Type
 `tags` | Array&lt;string&gt;
 `relatedEntityId` | string
 `relatedEntityType` | string
+`isPublic` | boolean
 
 ## Example
 
@@ -24,6 +25,7 @@ const example = {
   "tags": ["compliance","identity-document"],
   "relatedEntityId": null,
   "relatedEntityType": null,
+  "isPublic": null,
 } satisfies RequestUploadUrlDto
 
 console.log(example)

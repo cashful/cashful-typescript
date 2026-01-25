@@ -87,7 +87,7 @@ example().catch(console.error);
 
 ## listProducts
 
-> ListProductsResponseDto listProducts(merchantId, limit, offset, active)
+> ListProductsResponseDto listProducts(limit, offset, merchantId, active)
 
 List Products
 
@@ -111,12 +111,12 @@ async function example() {
   const api = new ProductsApi(config);
 
   const body = {
-    // string | The ID of the merchant. This parameter is required.
-    merchantId: merchantId_example,
     // number | Maximum number of records to return (optional)
     limit: 50,
     // number | Number of records to skip (optional)
     offset: 0,
+    // string | The ID of the merchant whose products are being requested. If not provided, the products of the authenticated merchant will be returned. (optional)
+    merchantId: merchantId_example,
     // boolean | Filter by active status (optional)
     active: true,
   } satisfies ListProductsRequest;
@@ -138,9 +138,9 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **merchantId** | `string` | The ID of the merchant. This parameter is required. | [Defaults to `undefined`] |
 | **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
 | **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
+| **merchantId** | `string` | The ID of the merchant whose products are being requested. If not provided, the products of the authenticated merchant will be returned. | [Optional] [Defaults to `undefined`] |
 | **active** | `boolean` | Filter by active status | [Optional] [Defaults to `undefined`] |
 
 ### Return type

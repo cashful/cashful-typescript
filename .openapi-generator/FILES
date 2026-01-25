@@ -87,6 +87,8 @@ docs/GetActiveMemberRoleResponseDto.md
 docs/GetApiKeyResponseDto.md
 docs/GetFullOrganizationResponseDto.md
 docs/GetInvitationResponseDto.md
+docs/GetJsonWebKeySetResponseDto.md
+docs/GetJsonWebTokenResponseDto.md
 docs/GetSessionResponseDto.md
 docs/HasPermissionDto.md
 docs/HasPermissionResponseDto.md
@@ -102,6 +104,7 @@ docs/InviteMemberResponseDto.md
 docs/IsUsernameAvailableDto.md
 docs/IsUsernameAvailableResponseDto.md
 docs/IveriParamsDto.md
+docs/JwkDto.md
 docs/LeaveOrganizationDto.md
 docs/LeaveOrganizationResponseDto.md
 docs/LineItemDto.md
@@ -320,6 +323,8 @@ src/models/GetActiveMemberRoleResponseDto.ts
 src/models/GetApiKeyResponseDto.ts
 src/models/GetFullOrganizationResponseDto.ts
 src/models/GetInvitationResponseDto.ts
+src/models/GetJsonWebKeySetResponseDto.ts
+src/models/GetJsonWebTokenResponseDto.ts
 src/models/GetSessionResponseDto.ts
 src/models/HasPermissionDto.ts
 src/models/HasPermissionResponseDto.ts
@@ -334,6 +339,7 @@ src/models/InviteMemberResponseDto.ts
 src/models/IsUsernameAvailableDto.ts
 src/models/IsUsernameAvailableResponseDto.ts
 src/models/IveriParamsDto.ts
+src/models/JwkDto.ts
 src/models/LeaveOrganizationDto.ts
 src/models/LeaveOrganizationResponseDto.ts
 src/models/LineItemDto.ts

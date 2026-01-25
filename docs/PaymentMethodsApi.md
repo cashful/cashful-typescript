@@ -86,7 +86,7 @@ example().catch(console.error);
 
 ## listPaymentMethods
 
-> ListPaymentMethodsResponseDto listPaymentMethods(merchantId, limit, offset, customerId)
+> ListPaymentMethodsResponseDto listPaymentMethods(limit, offset, merchantId, customerId)
 
 List Payment Methods
 
@@ -110,12 +110,12 @@ async function example() {
   const api = new PaymentMethodsApi(config);
 
   const body = {
-    // string | The unique identifier of the merchant
-    merchantId: merchantId_example,
     // number | Maximum number of records to return (optional)
     limit: 50,
     // number | Number of records to skip (optional)
     offset: 0,
+    // string | The unique identifier of the merchant. If not provided, defaults to the authenticated user\'s active organization. (optional)
+    merchantId: merchantId_example,
     // string | The unique identifier of the customer (optional)
     customerId: customerId_example,
   } satisfies ListPaymentMethodsRequest;
@@ -137,9 +137,9 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **merchantId** | `string` | The unique identifier of the merchant | [Defaults to `undefined`] |
 | **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
 | **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
+| **merchantId** | `string` | The unique identifier of the merchant. If not provided, defaults to the authenticated user\&#39;s active organization. | [Optional] [Defaults to `undefined`] |
 | **customerId** | `string` | The unique identifier of the customer | [Optional] [Defaults to `undefined`] |
 
 ### Return type

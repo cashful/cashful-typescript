@@ -16,6 +16,8 @@ Name | Type
 `amount` | number
 `currency` | string
 `active` | boolean
+`imageId` | string
+`imageUrl` | string
 `metadata` | { [key: string]: any; }
 
 ## Example
@@ -35,6 +37,8 @@ const example = {
   "amount": null,
   "currency": null,
   "active": null,
+  "imageId": null,
+  "imageUrl": null,
   "metadata": {"sku":"PROD-001"},
 } satisfies ProductResponseDto
 
