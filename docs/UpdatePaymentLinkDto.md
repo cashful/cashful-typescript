@@ -6,11 +6,14 @@
 
 Name | Type
 ------------ | -------------
+`name` | string
+`description` | string
 `active` | boolean
-`amount` | number
+`totalAmount` | number
 `successUrl` | string
 `cancelUrl` | string
 `metadata` | { [key: string]: any; }
+`hostedCheckoutConfig` | [HostedCheckoutConfigDto](HostedCheckoutConfigDto.md)
 
 ## Example
 
@@ -19,11 +22,14 @@ import type { UpdatePaymentLinkDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {
+  "name": null,
+  "description": null,
   "active": null,
-  "amount": null,
+  "totalAmount": null,
   "successUrl": null,
   "cancelUrl": null,
   "metadata": {"orderId":"12345"},
+  "hostedCheckoutConfig": null,
 } satisfies UpdatePaymentLinkDto
 
 console.log(example)

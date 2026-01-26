@@ -4,18 +4,18 @@ All URIs are relative to *https://api.cashful.africa*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**storageControllerConfirmUploadCanary**](StorageApi.md#storagecontrollerconfirmuploadcanary) | **POST** /api/canary/storage/confirm-upload | Confirm that a file upload was completed |
-| [**storageControllerDeleteCanary**](StorageApi.md#storagecontrollerdeletecanary) | **DELETE** /api/canary/storage/{id} | Delete a file |
-| [**storageControllerGetDownloadUrlCanary**](StorageApi.md#storagecontrollergetdownloadurlcanary) | **GET** /api/canary/storage/{id}/download-url | Get a presigned download URL for a file |
-| [**storageControllerListCanary**](StorageApi.md#storagecontrollerlistcanary) | **GET** /api/canary/storage | List files |
-| [**storageControllerRequestUploadUrlCanary**](StorageApi.md#storagecontrollerrequestuploadurlcanary) | **POST** /api/canary/storage/upload-url | Request a presigned URL for file upload |
-| [**storageControllerRetrieveCanary**](StorageApi.md#storagecontrollerretrievecanary) | **GET** /api/canary/storage/{id} | Get file details |
+| [**confirmUpload**](StorageApi.md#confirmupload) | **POST** /api/canary/storage/confirm-upload | Confirm that a file upload was completed |
+| [**deleteFile**](StorageApi.md#deletefile) | **DELETE** /api/canary/storage/{id} | Delete a file |
+| [**getDownloadUrl**](StorageApi.md#getdownloadurl) | **GET** /api/canary/storage/{id}/download-url | Get a presigned download URL for a file |
+| [**getFileDetails**](StorageApi.md#getfiledetails) | **GET** /api/canary/storage/{id} | Get file details |
+| [**listFiles**](StorageApi.md#listfiles) | **GET** /api/canary/storage | List files |
+| [**requestUploadUrl**](StorageApi.md#requestuploadurl) | **POST** /api/canary/storage/upload-url | Request a presigned URL for file upload |
 
 
 
-## storageControllerConfirmUploadCanary
+## confirmUpload
 
-> FileDto storageControllerConfirmUploadCanary(confirmUploadDto)
+> FileDto confirmUpload(confirmUploadDto)
 
 Confirm that a file upload was completed
 
@@ -26,7 +26,7 @@ import {
   Configuration,
   StorageApi,
 } from '@cashful/typescript';
-import type { StorageControllerConfirmUploadCanaryRequest } from '@cashful/typescript';
+import type { ConfirmUploadRequest } from '@cashful/typescript';
 
 async function example() {
   console.log("🚀 Testing @cashful/typescript SDK...");
@@ -39,10 +39,10 @@ async function example() {
   const body = {
     // ConfirmUploadDto
     confirmUploadDto: {"fileId":"file_abc123xyz","checksum":"sha256:a1b2c3d4e5f6...","size":245760},
-  } satisfies StorageControllerConfirmUploadCanaryRequest;
+  } satisfies ConfirmUploadRequest;
 
   try {
-    const data = await api.storageControllerConfirmUploadCanary(body);
+    const data = await api.confirmUpload(body);
     console.log(data);
   } catch (error) {
     console.error(error);
@@ -86,9 +86,9 @@ example().catch(console.error);
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 
-## storageControllerDeleteCanary
+## deleteFile
 
-> storageControllerDeleteCanary(id)
+> deleteFile(id)
 
 Delete a file
 
@@ -99,7 +99,7 @@ import {
   Configuration,
   StorageApi,
 } from '@cashful/typescript';
-import type { StorageControllerDeleteCanaryRequest } from '@cashful/typescript';
+import type { DeleteFileRequest } from '@cashful/typescript';
 
 async function example() {
   console.log("🚀 Testing @cashful/typescript SDK...");
@@ -112,10 +112,10 @@ async function example() {
   const body = {
     // string | File ID
     id: id_example,
-  } satisfies StorageControllerDeleteCanaryRequest;
+  } satisfies DeleteFileRequest;
 
   try {
-    const data = await api.storageControllerDeleteCanary(body);
+    const data = await api.deleteFile(body);
     console.log(data);
   } catch (error) {
     console.error(error);
@@ -159,9 +159,9 @@ example().catch(console.error);
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 
-## storageControllerGetDownloadUrlCanary
+## getDownloadUrl
 
-> PresignedDownloadResponseDto storageControllerGetDownloadUrlCanary(id)
+> PresignedDownloadResponseDto getDownloadUrl(id)
 
 Get a presigned download URL for a file
 
@@ -172,7 +172,7 @@ import {
   Configuration,
   StorageApi,
 } from '@cashful/typescript';
-import type { StorageControllerGetDownloadUrlCanaryRequest } from '@cashful/typescript';
+import type { GetDownloadUrlRequest } from '@cashful/typescript';
 
 async function example() {
   console.log("🚀 Testing @cashful/typescript SDK...");
@@ -185,10 +185,10 @@ async function example() {
   const body = {
     // string | File ID
     id: id_example,
-  } satisfies StorageControllerGetDownloadUrlCanaryRequest;
+  } satisfies GetDownloadUrlRequest;
 
   try {
-    const data = await api.storageControllerGetDownloadUrlCanary(body);
+    const data = await api.getDownloadUrl(body);
     console.log(data);
   } catch (error) {
     console.error(error);
@@ -232,9 +232,82 @@ example().catch(console.error);
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 
-## storageControllerListCanary
+## getFileDetails
 
-> ListFilesResponseDto storageControllerListCanary(limit, offset, tag, status, relatedEntityId, relatedEntityType)
+> FileDto getFileDetails(id)
+
+Get file details
+
+### Example
+
+```ts
+import {
+  Configuration,
+  StorageApi,
+} from '@cashful/typescript';
+import type { GetFileDetailsRequest } from '@cashful/typescript';
+
+async function example() {
+  console.log("🚀 Testing @cashful/typescript SDK...");
+  const config = new Configuration({ 
+    // Configure HTTP bearer authorization: bearer
+    accessToken: "YOUR BEARER TOKEN",
+  });
+  const api = new StorageApi(config);
+
+  const body = {
+    // string | File ID
+    id: id_example,
+  } satisfies GetFileDetailsRequest;
+
+  try {
+    const data = await api.getFileDetails(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | `string` | File ID | [Defaults to `undefined`] |
+
+### Return type
+
+[**FileDto**](FileDto.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** |  |  -  |
+| **400** | Bad Request - Invalid input |  -  |
+| **401** | Unauthorized |  -  |
+| **404** | Resource not found |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
+## listFiles
+
+> ListFilesResponseDto listFiles(limit, offset, tag, status, relatedEntityId, relatedEntityType)
 
 List files
 
@@ -245,7 +318,7 @@ import {
   Configuration,
   StorageApi,
 } from '@cashful/typescript';
-import type { StorageControllerListCanaryRequest } from '@cashful/typescript';
+import type { ListFilesRequest } from '@cashful/typescript';
 
 async function example() {
   console.log("🚀 Testing @cashful/typescript SDK...");
@@ -268,10 +341,10 @@ async function example() {
     relatedEntityId: relatedEntityId_example,
     // string (optional)
     relatedEntityType: relatedEntityType_example,
-  } satisfies StorageControllerListCanaryRequest;
+  } satisfies ListFilesRequest;
 
   try {
-    const data = await api.storageControllerListCanary(body);
+    const data = await api.listFiles(body);
     console.log(data);
   } catch (error) {
     console.error(error);
@@ -320,9 +393,9 @@ example().catch(console.error);
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 
-## storageControllerRequestUploadUrlCanary
+## requestUploadUrl
 
-> PresignedUploadResponseDto storageControllerRequestUploadUrlCanary(requestUploadUrlDto)
+> PresignedUploadResponseDto requestUploadUrl(requestUploadUrlDto)
 
 Request a presigned URL for file upload
 
@@ -333,7 +406,7 @@ import {
   Configuration,
   StorageApi,
 } from '@cashful/typescript';
-import type { StorageControllerRequestUploadUrlCanaryRequest } from '@cashful/typescript';
+import type { RequestUploadUrlRequest } from '@cashful/typescript';
 
 async function example() {
   console.log("🚀 Testing @cashful/typescript SDK...");
@@ -346,10 +419,10 @@ async function example() {
   const body = {
     // RequestUploadUrlDto
     requestUploadUrlDto: {"filename":"iphone-15.png","mimeType":"image/png","isPublic":true,"tags":["product","image"],"relatedEntityId":"product_123","relatedEntityType":"product"},
-  } satisfies StorageControllerRequestUploadUrlCanaryRequest;
+  } satisfies RequestUploadUrlRequest;
 
   try {
-    const data = await api.storageControllerRequestUploadUrlCanary(body);
+    const data = await api.requestUploadUrl(body);
     console.log(data);
   } catch (error) {
     console.error(error);
@@ -385,79 +458,6 @@ example().catch(console.error);
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **201** |  |  -  |
-| **400** | Bad Request - Invalid input |  -  |
-| **401** | Unauthorized |  -  |
-| **404** | Resource not found |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-
-## storageControllerRetrieveCanary
-
-> FileDto storageControllerRetrieveCanary(id)
-
-Get file details
-
-### Example
-
-```ts
-import {
-  Configuration,
-  StorageApi,
-} from '@cashful/typescript';
-import type { StorageControllerRetrieveCanaryRequest } from '@cashful/typescript';
-
-async function example() {
-  console.log("🚀 Testing @cashful/typescript SDK...");
-  const config = new Configuration({ 
-    // Configure HTTP bearer authorization: bearer
-    accessToken: "YOUR BEARER TOKEN",
-  });
-  const api = new StorageApi(config);
-
-  const body = {
-    // string | File ID
-    id: id_example,
-  } satisfies StorageControllerRetrieveCanaryRequest;
-
-  try {
-    const data = await api.storageControllerRetrieveCanary(body);
-    console.log(data);
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-// Run the test
-example().catch(console.error);
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | `string` | File ID | [Defaults to `undefined`] |
-
-### Return type
-
-[**FileDto**](FileDto.md)
-
-### Authorization
-
-[bearer](../README.md#bearer)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** |  |  -  |
 | **400** | Bad Request - Invalid input |  -  |
 | **401** | Unauthorized |  -  |
 | **404** | Resource not found |  -  |

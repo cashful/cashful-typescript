@@ -1,5 +1,5 @@
 
-# ErrorResponseDto
+# BadRequestResponseDto
 
 
 ## Properties
@@ -13,14 +13,14 @@ Name | Type
 ## Example
 
 ```typescript
-import type { ErrorResponseDto } from '@cashful/typescript'
+import type { BadRequestResponseDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {
   "statusCode": 400,
   "message": null,
   "error": Bad Request,
-} satisfies ErrorResponseDto
+} satisfies BadRequestResponseDto
 
 console.log(example)
 
@@ -29,7 +29,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as ErrorResponseDto
+const exampleParsed = JSON.parse(exampleJSON) as BadRequestResponseDto
 console.log(exampleParsed)
 ```
 

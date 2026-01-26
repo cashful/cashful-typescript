@@ -22,6 +22,7 @@ Name | Type
 `status` | string
 `expiresAt` | Date
 `metadata` | { [key: string]: any; }
+`hostedCheckoutConfig` | [HostedCheckoutConfigDto](HostedCheckoutConfigDto.md)
 
 ## Example
 
@@ -46,6 +47,7 @@ const example = {
   "status": null,
   "expiresAt": null,
   "metadata": {"orderId":"ORD-12345"},
+  "hostedCheckoutConfig": null,
 } satisfies CheckoutSessionResponseDto
 
 console.log(example)

@@ -10,12 +10,14 @@ Name | Type
 `customerId` | string
 `productId` | string
 `successUrl` | string
+`failureUrl` | string
 `cancelUrl` | string
 `lineItems` | [Array&lt;LineItemDto&gt;](LineItemDto.md)
 `totalAmount` | number
 `currency` | string
 `mode` | string
 `metadata` | { [key: string]: any; }
+`hostedCheckoutConfig` | [HostedCheckoutConfigDto](HostedCheckoutConfigDto.md)
 
 ## Example
 
@@ -28,12 +30,14 @@ const example = {
   "customerId": null,
   "productId": null,
   "successUrl": null,
+  "failureUrl": null,
   "cancelUrl": null,
   "lineItems": null,
   "totalAmount": null,
   "currency": null,
   "mode": null,
   "metadata": {"orderId":"ORD-12345","source":"web"},
+  "hostedCheckoutConfig": null,
 } satisfies CreateCheckoutSessionDto
 
 console.log(example)

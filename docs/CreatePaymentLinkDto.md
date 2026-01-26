@@ -6,15 +6,18 @@
 
 Name | Type
 ------------ | -------------
+`name` | string
+`description` | string
 `merchantId` | string
-`productId` | string
+`lineItems` | [Array&lt;LineItemDto&gt;](LineItemDto.md)
 `customerId` | string
-`amount` | number
+`totalAmount` | number
 `currency` | string
 `mode` | string
 `successUrl` | string
 `cancelUrl` | string
 `metadata` | { [key: string]: any; }
+`hostedCheckoutConfig` | [HostedCheckoutConfigDto](HostedCheckoutConfigDto.md)
 
 ## Example
 
@@ -23,15 +26,18 @@ import type { CreatePaymentLinkDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {
+  "name": null,
+  "description": null,
   "merchantId": null,
-  "productId": null,
+  "lineItems": null,
   "customerId": null,
-  "amount": null,
+  "totalAmount": null,
   "currency": null,
   "mode": null,
   "successUrl": null,
   "cancelUrl": null,
   "metadata": {"customField":"value","orderId":"12345"},
+  "hostedCheckoutConfig": null,
 } satisfies CreatePaymentLinkDto
 
 console.log(example)

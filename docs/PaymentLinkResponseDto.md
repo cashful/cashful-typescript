@@ -7,17 +7,20 @@
 Name | Type
 ------------ | -------------
 `id` | string
+`name` | string
+`description` | string
 `merchantId` | string
 `url` | string
-`productId` | string
+`lineItems` | [Array&lt;LineItemDto&gt;](LineItemDto.md)
 `customerId` | string
-`amount` | number
+`totalAmount` | number
 `currency` | string
 `mode` | string
 `active` | boolean
 `successUrl` | string
 `cancelUrl` | string
 `metadata` | { [key: string]: any; }
+`hostedCheckoutConfig` | [HostedCheckoutConfigDto](HostedCheckoutConfigDto.md)
 `createdAt` | Date
 `updatedAt` | Date
 `deletedAt` | Date
@@ -30,17 +33,20 @@ import type { PaymentLinkResponseDto } from '@cashful/typescript'
 // TODO: Update the object below with actual values
 const example = {
   "id": null,
+  "name": null,
+  "description": null,
   "merchantId": null,
   "url": null,
-  "productId": null,
+  "lineItems": null,
   "customerId": null,
-  "amount": null,
+  "totalAmount": null,
   "currency": null,
   "mode": null,
   "active": null,
   "successUrl": null,
   "cancelUrl": null,
   "metadata": {"customField":"value"},
+  "hostedCheckoutConfig": null,
   "createdAt": null,
   "updatedAt": null,
   "deletedAt": null,

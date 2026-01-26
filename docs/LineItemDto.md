@@ -6,6 +6,7 @@
 
 Name | Type
 ------------ | -------------
+`name` | string
 `productId` | string
 `quantity` | number
 `amount` | number
@@ -18,6 +19,7 @@ import type { LineItemDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {
+  "name": null,
   "productId": null,
   "quantity": null,
   "amount": null,

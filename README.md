@@ -1,4 +1,4 @@
-# @cashful/typescript@0.7.0
+# @cashful/typescript@0.8.0
 
 A TypeScript SDK client for the api.cashful.africa API.
 
@@ -153,15 +153,16 @@ All URIs are relative to *https://api.cashful.africa*
 *PayoutsApi* | [**listPayouts**](docs/PayoutsApi.md#listpayouts) | **GET** /api/canary/payouts | List Payouts
 *ProductsApi* | [**createProduct**](docs/ProductsApi.md#createproduct) | **POST** /api/canary/products | Create Product
 *ProductsApi* | [**listProducts**](docs/ProductsApi.md#listproducts) | **GET** /api/canary/products | List Products
+*ProductsApi* | [**retrieveMultipleProducts**](docs/ProductsApi.md#retrievemultipleproducts) | **POST** /api/canary/products/multiple | Retrieve Multiple Products by ID
 *ProductsApi* | [**retrieveProduct**](docs/ProductsApi.md#retrieveproduct) | **GET** /api/canary/products/{id} | Retrieve Product
 *ProductsApi* | [**updateProduct**](docs/ProductsApi.md#updateproduct) | **PATCH** /api/canary/products/{id} | Update Product
 *PurchasesApi* | [**createPurchase**](docs/PurchasesApi.md#createpurchase) | **POST** /api/canary/purchases | Buy with Cash Balance
-*StorageApi* | [**storageControllerConfirmUploadCanary**](docs/StorageApi.md#storagecontrollerconfirmuploadcanary) | **POST** /api/canary/storage/confirm-upload | Confirm that a file upload was completed
-*StorageApi* | [**storageControllerDeleteCanary**](docs/StorageApi.md#storagecontrollerdeletecanary) | **DELETE** /api/canary/storage/{id} | Delete a file
-*StorageApi* | [**storageControllerGetDownloadUrlCanary**](docs/StorageApi.md#storagecontrollergetdownloadurlcanary) | **GET** /api/canary/storage/{id}/download-url | Get a presigned download URL for a file
-*StorageApi* | [**storageControllerListCanary**](docs/StorageApi.md#storagecontrollerlistcanary) | **GET** /api/canary/storage | List files
-*StorageApi* | [**storageControllerRequestUploadUrlCanary**](docs/StorageApi.md#storagecontrollerrequestuploadurlcanary) | **POST** /api/canary/storage/upload-url | Request a presigned URL for file upload
-*StorageApi* | [**storageControllerRetrieveCanary**](docs/StorageApi.md#storagecontrollerretrievecanary) | **GET** /api/canary/storage/{id} | Get file details
+*StorageApi* | [**confirmUpload**](docs/StorageApi.md#confirmupload) | **POST** /api/canary/storage/confirm-upload | Confirm that a file upload was completed
+*StorageApi* | [**deleteFile**](docs/StorageApi.md#deletefile) | **DELETE** /api/canary/storage/{id} | Delete a file
+*StorageApi* | [**getDownloadUrl**](docs/StorageApi.md#getdownloadurl) | **GET** /api/canary/storage/{id}/download-url | Get a presigned download URL for a file
+*StorageApi* | [**getFileDetails**](docs/StorageApi.md#getfiledetails) | **GET** /api/canary/storage/{id} | Get file details
+*StorageApi* | [**listFiles**](docs/StorageApi.md#listfiles) | **GET** /api/canary/storage | List files
+*StorageApi* | [**requestUploadUrl**](docs/StorageApi.md#requestuploadurl) | **POST** /api/canary/storage/upload-url | Request a presigned URL for file upload
 *TransfersApi* | [**createTransfer**](docs/TransfersApi.md#createtransfer) | **POST** /api/canary/transfers | Create P2P Transfer
 *TransfersApi* | [**listTransfers**](docs/TransfersApi.md#listtransfers) | **GET** /api/canary/transfers | List Transfers
 *WebhooksApi* | [**createWebhookEndpoint**](docs/WebhooksApi.md#createwebhookendpoint) | **POST** /api/canary/webhook-endpoints | Create Webhook Endpoint
@@ -192,6 +193,7 @@ All URIs are relative to *https://api.cashful.africa*
 - [AnalyticsResponseDto](docs/AnalyticsResponseDto.md)
 - [AnalyticsSummaryDto](docs/AnalyticsSummaryDto.md)
 - [ApiKey](docs/ApiKey.md)
+- [BadRequestResponseDto](docs/BadRequestResponseDto.md)
 - [BalanceHistoryResponseDto](docs/BalanceHistoryResponseDto.md)
 - [BalanceTransactionDto](docs/BalanceTransactionDto.md)
 - [BanUserDto](docs/BanUserDto.md)
@@ -236,10 +238,10 @@ All URIs are relative to *https://api.cashful.africa*
 - [DeleteOrganizationResponseDto](docs/DeleteOrganizationResponseDto.md)
 - [DeleteUserDto](docs/DeleteUserDto.md)
 - [DeleteUserResponseDto](docs/DeleteUserResponseDto.md)
-- [ErrorResponseDto](docs/ErrorResponseDto.md)
 - [EventResponseDto](docs/EventResponseDto.md)
 - [EvervaultEncryptedCardDto](docs/EvervaultEncryptedCardDto.md)
 - [FileDto](docs/FileDto.md)
+- [ForbiddenResponseDto](docs/ForbiddenResponseDto.md)
 - [ForgotPasswordDto](docs/ForgotPasswordDto.md)
 - [ForgotPasswordResponseDto](docs/ForgotPasswordResponseDto.md)
 - [GetAccessTokenDto](docs/GetAccessTokenDto.md)
@@ -254,11 +256,13 @@ All URIs are relative to *https://api.cashful.africa*
 - [GetSessionResponseDto](docs/GetSessionResponseDto.md)
 - [HasPermissionDto](docs/HasPermissionDto.md)
 - [HasPermissionResponseDto](docs/HasPermissionResponseDto.md)
+- [HostedCheckoutConfigDto](docs/HostedCheckoutConfigDto.md)
 - [IVeriHealthCheckResponseDto](docs/IVeriHealthCheckResponseDto.md)
 - [ImpersonateUserDto](docs/ImpersonateUserDto.md)
 - [ImpersonateUserResponseDto](docs/ImpersonateUserResponseDto.md)
 - [InitiatePaymentDto](docs/InitiatePaymentDto.md)
 - [InitiatePaymentResponseDto](docs/InitiatePaymentResponseDto.md)
+- [InternalServerErrorResponseDto](docs/InternalServerErrorResponseDto.md)
 - [InvitationDto](docs/InvitationDto.md)
 - [InviteMemberDto](docs/InviteMemberDto.md)
 - [InviteMemberResponseDto](docs/InviteMemberResponseDto.md)
@@ -295,6 +299,7 @@ All URIs are relative to *https://api.cashful.africa*
 - [MemberDto](docs/MemberDto.md)
 - [MerchantBalanceResponseDto](docs/MerchantBalanceResponseDto.md)
 - [MetricStatsDto](docs/MetricStatsDto.md)
+- [NotFoundResponseDto](docs/NotFoundResponseDto.md)
 - [NotificationDto](docs/NotificationDto.md)
 - [OrganizationComplianceResponseDto](docs/OrganizationComplianceResponseDto.md)
 - [OrganizationDto](docs/OrganizationDto.md)
@@ -323,6 +328,7 @@ All URIs are relative to *https://api.cashful.africa*
 - [ResetPasswordResponseDto](docs/ResetPasswordResponseDto.md)
 - [ResetPhonePasswordDto](docs/ResetPhonePasswordDto.md)
 - [ResetPhonePasswordResponseDto](docs/ResetPhonePasswordResponseDto.md)
+- [RetrieveMultipleProductsDto](docs/RetrieveMultipleProductsDto.md)
 - [RevokeSessionDto](docs/RevokeSessionDto.md)
 - [RevokeSessionResponseDto](docs/RevokeSessionResponseDto.md)
 - [SendEmail200Response](docs/SendEmail200Response.md)
@@ -350,6 +356,7 @@ All URIs are relative to *https://api.cashful.africa*
 - [StopImpersonatingResponseDto](docs/StopImpersonatingResponseDto.md)
 - [TimeframeMetricsDto](docs/TimeframeMetricsDto.md)
 - [TransferResponseDto](docs/TransferResponseDto.md)
+- [UnauthorizedResponseDto](docs/UnauthorizedResponseDto.md)
 - [UnbanUserDto](docs/UnbanUserDto.md)
 - [UnbanUserResponseDto](docs/UnbanUserResponseDto.md)
 - [UnlinkAccountDto](docs/UnlinkAccountDto.md)
@@ -357,6 +364,8 @@ All URIs are relative to *https://api.cashful.africa*
 - [UpdateApiKeyDto](docs/UpdateApiKeyDto.md)
 - [UpdateApiKeyResponseDto](docs/UpdateApiKeyResponseDto.md)
 - [UpdateBalanceDto](docs/UpdateBalanceDto.md)
+- [UpdateCheckoutSessionDto](docs/UpdateCheckoutSessionDto.md)
+- [UpdateCheckoutSessionResponseDto](docs/UpdateCheckoutSessionResponseDto.md)
 - [UpdateCustomerDto](docs/UpdateCustomerDto.md)
 - [UpdateMemberRoleDto](docs/UpdateMemberRoleDto.md)
 - [UpdateMemberRoleResponseDto](docs/UpdateMemberRoleResponseDto.md)
@@ -392,8 +401,8 @@ This TypeScript SDK client supports the [Fetch API](https://fetch.spec.whatwg.or
 and is automatically generated by the
 [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `0.7.0`
-- Package version: `0.7.0`
+- API version: `0.8.0`
+- Package version: `0.8.0`
 - Generator version: `7.17.0`
 - Build package: `org.openapitools.codegen.languages.TypeScriptFetchClientCodegen`
 

@@ -6,6 +6,7 @@ All URIs are relative to *https://api.cashful.africa*
 |------------- | ------------- | -------------|
 | [**createProduct**](ProductsApi.md#createproduct) | **POST** /api/canary/products | Create Product |
 | [**listProducts**](ProductsApi.md#listproducts) | **GET** /api/canary/products | List Products |
+| [**retrieveMultipleProducts**](ProductsApi.md#retrievemultipleproducts) | **POST** /api/canary/products/multiple | Retrieve Multiple Products by ID |
 | [**retrieveProduct**](ProductsApi.md#retrieveproduct) | **GET** /api/canary/products/{id} | Retrieve Product |
 | [**updateProduct**](ProductsApi.md#updateproduct) | **PATCH** /api/canary/products/{id} | Update Product |
 
@@ -169,6 +170,81 @@ example().catch(console.error);
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 
+## retrieveMultipleProducts
+
+> Array&lt;ProductResponseDto&gt; retrieveMultipleProducts(retrieveMultipleProductsDto)
+
+Retrieve Multiple Products by ID
+
+Retrieves multiple products using the provided ID\&#39;s with a maximum of 50 IDs.
+
+### Example
+
+```ts
+import {
+  Configuration,
+  ProductsApi,
+} from '@cashful/typescript';
+import type { RetrieveMultipleProductsRequest } from '@cashful/typescript';
+
+async function example() {
+  console.log("🚀 Testing @cashful/typescript SDK...");
+  const config = new Configuration({ 
+    // Configure HTTP bearer authorization: bearer
+    accessToken: "YOUR BEARER TOKEN",
+  });
+  const api = new ProductsApi(config);
+
+  const body = {
+    // RetrieveMultipleProductsDto | List of product IDs
+    retrieveMultipleProductsDto: ...,
+  } satisfies RetrieveMultipleProductsRequest;
+
+  try {
+    const data = await api.retrieveMultipleProducts(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **retrieveMultipleProductsDto** | [RetrieveMultipleProductsDto](RetrieveMultipleProductsDto.md) | List of product IDs | |
+
+### Return type
+
+[**Array&lt;ProductResponseDto&gt;**](ProductResponseDto.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successfully retrieved products |  -  |
+| **400** | Bad Request - Invalid input |  -  |
+| **401** | Unauthorized |  -  |
+| **404** | Resource not found |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
 ## retrieveProduct
 
 > ProductResponseDto retrieveProduct(id)
@@ -236,6 +312,7 @@ example().catch(console.error);
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successfully retrieved product |  -  |
+| **400** | Bad Request - Invalid input |  -  |
 | **401** | Unauthorized |  -  |
 | **404** | Resource not found |  -  |
 | **500** | Internal server error |  -  |

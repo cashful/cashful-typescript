@@ -25,6 +25,7 @@ docs/AnalyticsResponseDto.md
 docs/AnalyticsSummaryDto.md
 docs/ApiKey.md
 docs/AuthenticationApi.md
+docs/BadRequestResponseDto.md
 docs/BalanceApi.md
 docs/BalanceHistoryResponseDto.md
 docs/BalanceTransactionDto.md
@@ -73,11 +74,11 @@ docs/DeleteOrganizationDto.md
 docs/DeleteOrganizationResponseDto.md
 docs/DeleteUserDto.md
 docs/DeleteUserResponseDto.md
-docs/ErrorResponseDto.md
 docs/EventResponseDto.md
 docs/EventsApi.md
 docs/EvervaultEncryptedCardDto.md
 docs/FileDto.md
+docs/ForbiddenResponseDto.md
 docs/ForgotPasswordDto.md
 docs/ForgotPasswordResponseDto.md
 docs/GetAccessTokenDto.md
@@ -93,11 +94,13 @@ docs/GetSessionResponseDto.md
 docs/HasPermissionDto.md
 docs/HasPermissionResponseDto.md
 docs/HealthApi.md
+docs/HostedCheckoutConfigDto.md
 docs/IVeriHealthCheckResponseDto.md
 docs/ImpersonateUserDto.md
 docs/ImpersonateUserResponseDto.md
 docs/InitiatePaymentDto.md
 docs/InitiatePaymentResponseDto.md
+docs/InternalServerErrorResponseDto.md
 docs/InvitationDto.md
 docs/InviteMemberDto.md
 docs/InviteMemberResponseDto.md
@@ -134,6 +137,7 @@ docs/ListWebhookEndpointsResponseDto.md
 docs/MemberDto.md
 docs/MerchantBalanceResponseDto.md
 docs/MetricStatsDto.md
+docs/NotFoundResponseDto.md
 docs/NotificationDto.md
 docs/NotificationsApi.md
 docs/OrganizationComplianceResponseDto.md
@@ -169,6 +173,7 @@ docs/ResetPasswordDto.md
 docs/ResetPasswordResponseDto.md
 docs/ResetPhonePasswordDto.md
 docs/ResetPhonePasswordResponseDto.md
+docs/RetrieveMultipleProductsDto.md
 docs/RevokeSessionDto.md
 docs/RevokeSessionResponseDto.md
 docs/SendEmail200Response.md
@@ -198,6 +203,7 @@ docs/StorageApi.md
 docs/TimeframeMetricsDto.md
 docs/TransferResponseDto.md
 docs/TransfersApi.md
+docs/UnauthorizedResponseDto.md
 docs/UnbanUserDto.md
 docs/UnbanUserResponseDto.md
 docs/UnlinkAccountDto.md
@@ -205,6 +211,8 @@ docs/UnlinkAccountResponseDto.md
 docs/UpdateApiKeyDto.md
 docs/UpdateApiKeyResponseDto.md
 docs/UpdateBalanceDto.md
+docs/UpdateCheckoutSessionDto.md
+docs/UpdateCheckoutSessionResponseDto.md
 docs/UpdateCustomerDto.md
 docs/UpdateMemberRoleDto.md
 docs/UpdateMemberRoleResponseDto.md
@@ -266,6 +274,7 @@ src/models/AdminUpdateUserResponseDto.ts
 src/models/AnalyticsResponseDto.ts
 src/models/AnalyticsSummaryDto.ts
 src/models/ApiKey.ts
+src/models/BadRequestResponseDto.ts
 src/models/BalanceHistoryResponseDto.ts
 src/models/BalanceTransactionDto.ts
 src/models/BanUserDto.ts
@@ -310,10 +319,10 @@ src/models/DeleteOrganizationDto.ts
 src/models/DeleteOrganizationResponseDto.ts
 src/models/DeleteUserDto.ts
 src/models/DeleteUserResponseDto.ts
-src/models/ErrorResponseDto.ts
 src/models/EventResponseDto.ts
 src/models/EvervaultEncryptedCardDto.ts
 src/models/FileDto.ts
+src/models/ForbiddenResponseDto.ts
 src/models/ForgotPasswordDto.ts
 src/models/ForgotPasswordResponseDto.ts
 src/models/GetAccessTokenDto.ts
@@ -328,11 +337,13 @@ src/models/GetJsonWebTokenResponseDto.ts
 src/models/GetSessionResponseDto.ts
 src/models/HasPermissionDto.ts
 src/models/HasPermissionResponseDto.ts
+src/models/HostedCheckoutConfigDto.ts
 src/models/IVeriHealthCheckResponseDto.ts
 src/models/ImpersonateUserDto.ts
 src/models/ImpersonateUserResponseDto.ts
 src/models/InitiatePaymentDto.ts
 src/models/InitiatePaymentResponseDto.ts
+src/models/InternalServerErrorResponseDto.ts
 src/models/InvitationDto.ts
 src/models/InviteMemberDto.ts
 src/models/InviteMemberResponseDto.ts
@@ -369,6 +380,7 @@ src/models/ListWebhookEndpointsResponseDto.ts
 src/models/MemberDto.ts
 src/models/MerchantBalanceResponseDto.ts
 src/models/MetricStatsDto.ts
+src/models/NotFoundResponseDto.ts
 src/models/NotificationDto.ts
 src/models/OrganizationComplianceResponseDto.ts
 src/models/OrganizationDto.ts
@@ -397,6 +409,7 @@ src/models/ResetPasswordDto.ts
 src/models/ResetPasswordResponseDto.ts
 src/models/ResetPhonePasswordDto.ts
 src/models/ResetPhonePasswordResponseDto.ts
+src/models/RetrieveMultipleProductsDto.ts
 src/models/RevokeSessionDto.ts
 src/models/RevokeSessionResponseDto.ts
 src/models/SendEmail200Response.ts
@@ -424,6 +437,7 @@ src/models/SocialSignInDto.ts
 src/models/StopImpersonatingResponseDto.ts
 src/models/TimeframeMetricsDto.ts
 src/models/TransferResponseDto.ts
+src/models/UnauthorizedResponseDto.ts
 src/models/UnbanUserDto.ts
 src/models/UnbanUserResponseDto.ts
 src/models/UnlinkAccountDto.ts
@@ -431,6 +445,8 @@ src/models/UnlinkAccountResponseDto.ts
 src/models/UpdateApiKeyDto.ts
 src/models/UpdateApiKeyResponseDto.ts
 src/models/UpdateBalanceDto.ts
+src/models/UpdateCheckoutSessionDto.ts
+src/models/UpdateCheckoutSessionResponseDto.ts
 src/models/UpdateCustomerDto.ts
 src/models/UpdateMemberRoleDto.ts
 src/models/UpdateMemberRoleResponseDto.ts
