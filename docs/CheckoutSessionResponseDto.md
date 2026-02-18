@@ -11,6 +11,7 @@ Name | Type
 `updatedAt` | Date
 `deletedAt` | Date
 `merchantId` | string
+`paymentIntentId` | string
 `customerId` | string
 `sessionUrl` | string
 `successUrl` | string
@@ -36,6 +37,7 @@ const example = {
   "updatedAt": null,
   "deletedAt": null,
   "merchantId": null,
+  "paymentIntentId": null,
   "customerId": null,
   "sessionUrl": null,
   "successUrl": null,

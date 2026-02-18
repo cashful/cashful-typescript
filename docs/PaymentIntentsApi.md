@@ -89,11 +89,11 @@ example().catch(console.error);
 
 ## confirmPaymentIntent
 
-> PaymentIntentResponseDto confirmPaymentIntent(id)
+> ConfirmPaymentIntentResponseDto confirmPaymentIntent(id, confirmPaymentIntentDto)
 
 Confirm Payment Intent
 
-Confirms a payment intent that requires confirmation. This initiates the actual payment processing.
+Confirms a payment intent that requires confirmation and returns 3DS parameters for card authentication.
 
 ### Example
 
@@ -115,6 +115,8 @@ async function example() {
   const body = {
     // string | The unique identifier of the payment intent
     id: id_example,
+    // ConfirmPaymentIntentDto
+    confirmPaymentIntentDto: ...,
   } satisfies ConfirmPaymentIntentRequest;
 
   try {
@@ -135,10 +137,11 @@ example().catch(console.error);
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | `string` | The unique identifier of the payment intent | [Defaults to `undefined`] |
+| **confirmPaymentIntentDto** | [ConfirmPaymentIntentDto](ConfirmPaymentIntentDto.md) |  | |
 
 ### Return type
 
-[**PaymentIntentResponseDto**](PaymentIntentResponseDto.md)
+[**ConfirmPaymentIntentResponseDto**](ConfirmPaymentIntentResponseDto.md)
 
 ### Authorization
 
@@ -146,14 +149,14 @@ example().catch(console.error);
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Payment intent confirmed and processing |  -  |
+| **200** | Payment intent confirmed and awaiting authentication |  -  |
 | **400** | Bad Request - Invalid input |  -  |
 | **401** | Unauthorized |  -  |
 | **404** | Resource not found |  -  |
@@ -168,7 +171,7 @@ example().catch(console.error);
 
 Create Payment Intent
 
-Creates a payment intent for off-session charges. Used for subscriptions, recurring billing, or server-to-server payments with saved cards.
+Creates a payment intent for a payment attempt. Used for hosted checkout or direct integrations.
 
 ### Example
 
@@ -240,7 +243,7 @@ example().catch(console.error);
 
 ## listPaymentIntents
 
-> ListPaymentIntentsResponseDto listPaymentIntents(merchantId, limit, offset, status)
+> ListPaymentIntentsResponseDto listPaymentIntents(status, offset, limit, merchantId)
 
 List Payment Intents
 
@@ -264,14 +267,14 @@ async function example() {
   const api = new PaymentIntentsApi(config);
 
   const body = {
-    // string | The ID of the merchant. If omitted, defaults to the authenticated merchant. (optional)
-    merchantId: merchantId_example,
-    // number | Maximum number of records to return (optional)
-    limit: 8.14,
-    // number | Number of records to skip (optional)
-    offset: 8.14,
-    // 'initiation' | 'requires_payment_method' | 'requires_confirmation' | 'requires_action' | 'processing' | 'requires_capture' | 'succeeded' | 'failed' | 'canceled' | Filter by status (optional)
+    // 'initiation' | 'requires_payment_method' | 'requires_confirmation' | 'requires_action' | 'processing' | 'requires_capture' | 'succeeded' | 'failed' | 'canceled' (optional)
     status: status_example,
+    // number (optional)
+    offset: 8.14,
+    // number (optional)
+    limit: 8.14,
+    // string (optional)
+    merchantId: merchantId_example,
   } satisfies ListPaymentIntentsRequest;
 
   try {
@@ -291,10 +294,10 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **merchantId** | `string` | The ID of the merchant. If omitted, defaults to the authenticated merchant. | [Optional] [Defaults to `undefined`] |
-| **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `50`] |
-| **offset** | `number` | Number of records to skip | [Optional] [Defaults to `0`] |
-| **status** | `initiation`, `requires_payment_method`, `requires_confirmation`, `requires_action`, `processing`, `requires_capture`, `succeeded`, `failed`, `canceled` | Filter by status | [Optional] [Defaults to `undefined`] [Enum: initiation, requires_payment_method, requires_confirmation, requires_action, processing, requires_capture, succeeded, failed, canceled] |
+| **status** | `initiation`, `requires_payment_method`, `requires_confirmation`, `requires_action`, `processing`, `requires_capture`, `succeeded`, `failed`, `canceled` |  | [Optional] [Defaults to `undefined`] [Enum: initiation, requires_payment_method, requires_confirmation, requires_action, processing, requires_capture, succeeded, failed, canceled] |
+| **offset** | `number` |  | [Optional] [Defaults to `undefined`] |
+| **limit** | `number` |  | [Optional] [Defaults to `undefined`] |
+| **merchantId** | `string` |  | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 

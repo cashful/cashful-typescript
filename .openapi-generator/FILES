@@ -40,9 +40,13 @@ docs/ChangePasswordDto.md
 docs/ChangePasswordResponseDto.md
 docs/CheckSlugDto.md
 docs/CheckSlugResponseDto.md
+docs/CheckoutSessionConfirmResponseDto.md
 docs/CheckoutSessionResponseDto.md
 docs/CheckoutsApi.md
 docs/ComplianceApi.md
+docs/ConfirmCheckoutSessionDto.md
+docs/ConfirmPaymentIntentDto.md
+docs/ConfirmPaymentIntentResponseDto.md
 docs/ConfirmUploadDto.md
 docs/CreateApiKeyDto.md
 docs/CreateApiKeyResponseDto.md
@@ -67,7 +71,6 @@ docs/CustomerStatsDto.md
 docs/CustomerTransactionDto.md
 docs/CustomersApi.md
 docs/DailyBreakdownDto.md
-docs/DebitReturnResponseDto.md
 docs/DeleteApiKeyDto.md
 docs/DeleteApiKeyResponseDto.md
 docs/DeleteOrganizationDto.md
@@ -288,7 +291,11 @@ src/models/ChangePasswordDto.ts
 src/models/ChangePasswordResponseDto.ts
 src/models/CheckSlugDto.ts
 src/models/CheckSlugResponseDto.ts
+src/models/CheckoutSessionConfirmResponseDto.ts
 src/models/CheckoutSessionResponseDto.ts
+src/models/ConfirmCheckoutSessionDto.ts
+src/models/ConfirmPaymentIntentDto.ts
+src/models/ConfirmPaymentIntentResponseDto.ts
 src/models/ConfirmUploadDto.ts
 src/models/CreateApiKeyDto.ts
 src/models/CreateApiKeyResponseDto.ts
@@ -312,7 +319,6 @@ src/models/CustomerResponseDto.ts
 src/models/CustomerStatsDto.ts
 src/models/CustomerTransactionDto.ts
 src/models/DailyBreakdownDto.ts
-src/models/DebitReturnResponseDto.ts
 src/models/DeleteApiKeyDto.ts
 src/models/DeleteApiKeyResponseDto.ts
 src/models/DeleteOrganizationDto.ts

@@ -16,6 +16,7 @@ Name | Type
 `taxRate` | number
 `embedMode` | boolean
 `embedOrigin` | string
+`methods` | Array&lt;string&gt;
 
 ## Example
 
@@ -34,6 +35,7 @@ const example = {
   "taxRate": null,
   "embedMode": null,
   "embedOrigin": null,
+  "methods": null,
 } satisfies HostedCheckoutConfigDto
 
 console.log(example)

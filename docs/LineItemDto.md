@@ -11,6 +11,8 @@ Name | Type
 `quantity` | number
 `amount` | number
 `currency` | string
+`imageId` | string
+`imageUrl` | string
 
 ## Example
 
@@ -24,6 +26,8 @@ const example = {
   "quantity": null,
   "amount": null,
   "currency": null,
+  "imageId": null,
+  "imageUrl": null,
 } satisfies LineItemDto
 
 console.log(example)

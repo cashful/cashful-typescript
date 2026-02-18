@@ -86,7 +86,7 @@ example().catch(console.error);
 
 ## listCheckoutSessions
 
-> ListCheckoutSessionsResponseDto listCheckoutSessions(merchantId, limit, offset, status)
+> ListCheckoutSessionsResponseDto listCheckoutSessions(limit, offset)
 
 List Checkout Sessions
 
@@ -110,14 +110,10 @@ async function example() {
   const api = new CheckoutsApi(config);
 
   const body = {
-    // string | The ID of the merchant to filter checkout sessions
-    merchantId: merchantId_example,
     // number | Maximum number of records to return (optional)
-    limit: 50,
+    limit: 8.14,
     // number | Number of records to skip (optional)
-    offset: 0,
-    // string | The status to filter checkout sessions (optional)
-    status: status_example,
+    offset: 8.14,
   } satisfies ListCheckoutSessionsRequest;
 
   try {
@@ -137,10 +133,8 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **merchantId** | `string` | The ID of the merchant to filter checkout sessions | [Defaults to `undefined`] |
 | **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
 | **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
-| **status** | `string` | The status to filter checkout sessions | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 

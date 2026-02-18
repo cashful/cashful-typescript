@@ -10,7 +10,6 @@ Name | Type
 `customerId` | string
 `productId` | string
 `successUrl` | string
-`failureUrl` | string
 `cancelUrl` | string
 `lineItems` | [Array&lt;LineItemDto&gt;](LineItemDto.md)
 `totalAmount` | number
@@ -30,7 +29,6 @@ const example = {
   "customerId": null,
   "productId": null,
   "successUrl": null,
-  "failureUrl": null,
   "cancelUrl": null,
   "lineItems": null,
   "totalAmount": null,
