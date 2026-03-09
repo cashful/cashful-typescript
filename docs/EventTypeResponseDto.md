@@ -1,22 +1,28 @@
 
-# RetrieveMultipleProductsDto
+# EventTypeResponseDto
 
 
 ## Properties
 
 Name | Type
 ------------ | -------------
-`ids` | Array&lt;string&gt;
+`id` | string
+`name` | string
+`description` | string
+`isActive` | boolean
 
 ## Example
 
 ```typescript
-import type { RetrieveMultipleProductsDto } from '@cashful/typescript'
+import type { EventTypeResponseDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "ids": ["product_001","product_002","product_003"],
-} satisfies RetrieveMultipleProductsDto
+  "id": null,
+  "name": null,
+  "description": null,
+  "isActive": null,
+} satisfies EventTypeResponseDto
 
 console.log(example)
 
@@ -25,7 +31,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as RetrieveMultipleProductsDto
+const exampleParsed = JSON.parse(exampleJSON) as EventTypeResponseDto
 console.log(exampleParsed)
 ```
 

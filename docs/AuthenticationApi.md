@@ -2880,7 +2880,7 @@ async function example() {
     // string
     token: token_example,
     // string | The URL to redirect user to reset their password
-    callbackURL: https://example.com/reset-password,
+    callbackURL: https://www.cashful.africa/reset-password,
   } satisfies ResetPasswordCallbackRequest;
 
   try {
@@ -4227,7 +4227,7 @@ async function example() {
     // string | The token to verify email
     token: verify_token_12345,
     // string | The URL to redirect to after email verification (optional)
-    callbackURL: https://example.com/callback,
+    callbackURL: https://www.cashful.africa/callback,
   } satisfies VerifyEmailRequest;
 
   try {

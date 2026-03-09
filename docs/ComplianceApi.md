@@ -5,7 +5,7 @@ All URIs are relative to *https://api.cashful.africa*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**createCompliance**](ComplianceApi.md#createcompliance) | **POST** /api/canary/compliance | Create Compliance info |
-| [**getCompliance**](ComplianceApi.md#getcompliance) | **GET** /api/canary/compliance | Get Compliance info for organization |
+| [**listCompliance**](ComplianceApi.md#listcompliance) | **GET** /api/canary/compliance | List Compliance info for organization |
 | [**updateCompliance**](ComplianceApi.md#updatecompliance) | **PATCH** /api/canary/compliance/{id} | Update Compliance info |
 
 
@@ -82,11 +82,11 @@ example().catch(console.error);
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 
-## getCompliance
+## listCompliance
 
-> OrganizationComplianceResponseDto getCompliance(organizationId)
+> ListOrganizationComplianceResponseDto listCompliance(limit, offset, filter, sort, order)
 
-Get Compliance info for organization
+List Compliance info for organization
 
 ### Example
 
@@ -95,7 +95,7 @@ import {
   Configuration,
   ComplianceApi,
 } from '@cashful/typescript';
-import type { GetComplianceRequest } from '@cashful/typescript';
+import type { ListComplianceRequest } from '@cashful/typescript';
 
 async function example() {
   console.log("🚀 Testing @cashful/typescript SDK...");
@@ -106,12 +106,20 @@ async function example() {
   const api = new ComplianceApi(config);
 
   const body = {
-    // string
-    organizationId: organizationId_example,
-  } satisfies GetComplianceRequest;
+    // number | Maximum number of items to return (optional)
+    limit: 50,
+    // number | Number of items to skip (optional)
+    offset: 0,
+    // string | JSON string used for dynamic filtering (optional)
+    filter: {"ids":["prod_123","prod_456"]},
+    // string | Field name to sort by (optional)
+    sort: createdAt,
+    // string | Sort direction (optional)
+    order: DESC,
+  } satisfies ListComplianceRequest;
 
   try {
-    const data = await api.getCompliance(body);
+    const data = await api.listCompliance(body);
     console.log(data);
   } catch (error) {
     console.error(error);
@@ -127,11 +135,15 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **organizationId** | `string` |  | [Defaults to `undefined`] |
+| **limit** | `number` | Maximum number of items to return | [Optional] [Defaults to `undefined`] |
+| **offset** | `number` | Number of items to skip | [Optional] [Defaults to `undefined`] |
+| **filter** | `string` | JSON string used for dynamic filtering | [Optional] [Defaults to `undefined`] |
+| **sort** | `string` | Field name to sort by | [Optional] [Defaults to `undefined`] |
+| **order** | `string` | Sort direction | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 
-[**OrganizationComplianceResponseDto**](OrganizationComplianceResponseDto.md)
+[**ListOrganizationComplianceResponseDto**](ListOrganizationComplianceResponseDto.md)
 
 ### Authorization
 

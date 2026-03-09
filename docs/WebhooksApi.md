@@ -160,7 +160,7 @@ example().catch(console.error);
 
 ## listWebhookEndpoints
 
-> ListWebhookEndpointsResponseDto listWebhookEndpoints(merchantId, limit, offset)
+> ListWebhookEndpointsResponseDto listWebhookEndpoints(merchantId, limit, offset, filter, sort, order)
 
 List Webhook Endpoints
 
@@ -190,6 +190,12 @@ async function example() {
     limit: 8.14,
     // number | Number of records to skip (optional)
     offset: 8.14,
+    // string | JSON string used for dynamic filtering (optional)
+    filter: filter_example,
+    // string | Field name to sort by (optional)
+    sort: sort_example,
+    // string | Sort direction (ASC or DESC) (optional)
+    order: order_example,
   } satisfies ListWebhookEndpointsRequest;
 
   try {
@@ -212,6 +218,9 @@ example().catch(console.error);
 | **merchantId** | `string` | The ID of the merchant whose webhooks are being requested. If omitted, defaults to the authenticated merchant. | [Optional] [Defaults to `undefined`] |
 | **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
 | **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
+| **filter** | `string` | JSON string used for dynamic filtering | [Optional] [Defaults to `undefined`] |
+| **sort** | `string` | Field name to sort by | [Optional] [Defaults to `undefined`] |
+| **order** | `string` | Sort direction (ASC or DESC) | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 

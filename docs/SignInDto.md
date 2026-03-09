@@ -20,7 +20,7 @@ import type { SignInDto } from '@cashful/typescript'
 const example = {
   "email": john.doe@example.com,
   "password": StrongPassword123!,
-  "callbackURL": https://example.com/auth/callback,
+  "callbackURL": https://www.cashful.africa/auth/callback,
   "rememberMe": true,
 } satisfies SignInDto
 

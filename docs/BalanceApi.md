@@ -11,7 +11,7 @@ All URIs are relative to *https://api.cashful.africa*
 
 ## getBalanceHistory
 
-> BalanceHistoryResponseDto getBalanceHistory(merchantId, limit, offset, startDate, endDate, transactionType)
+> BalanceHistoryResponseDto getBalanceHistory(limit, offset, filter, sort, order, merchantId, startDate, endDate, transactionType)
 
 List Merchant Balance History
 
@@ -35,12 +35,18 @@ async function example() {
   const api = new BalanceApi(config);
 
   const body = {
+    // number | Maximum number of items to return (optional)
+    limit: 50,
+    // number | Number of items to skip (optional)
+    offset: 0,
+    // string | JSON string used for dynamic filtering (optional)
+    filter: {"ids":["prod_123","prod_456"]},
+    // string | Field name to sort by (optional)
+    sort: createdAt,
+    // string | Sort direction (optional)
+    order: DESC,
     // string | The ID of the merchant whose balance is being requested. If omitted, defaults to the authenticated merchant. (optional)
     merchantId: merchantId_example,
-    // number | Maximum number of records to return (optional)
-    limit: 8.14,
-    // number | Number of records to skip (optional)
-    offset: 8.14,
     // string | Filter transactions from this date (ISO 8601 format) (optional)
     startDate: startDate_example,
     // string | Filter transactions until this date (ISO 8601 format) (optional)
@@ -66,9 +72,12 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **limit** | `number` | Maximum number of items to return | [Optional] [Defaults to `undefined`] |
+| **offset** | `number` | Number of items to skip | [Optional] [Defaults to `undefined`] |
+| **filter** | `string` | JSON string used for dynamic filtering | [Optional] [Defaults to `undefined`] |
+| **sort** | `string` | Field name to sort by | [Optional] [Defaults to `undefined`] |
+| **order** | `string` | Sort direction | [Optional] [Defaults to `undefined`] |
 | **merchantId** | `string` | The ID of the merchant whose balance is being requested. If omitted, defaults to the authenticated merchant. | [Optional] [Defaults to `undefined`] |
-| **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
-| **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
 | **startDate** | `string` | Filter transactions from this date (ISO 8601 format) | [Optional] [Defaults to `undefined`] |
 | **endDate** | `string` | Filter transactions until this date (ISO 8601 format) | [Optional] [Defaults to `undefined`] |
 | **transactionType** | `string` | Filter by transaction type (e.g., \&quot;credit\&quot;, \&quot;debit\&quot;, \&quot;fee\&quot;, \&quot;payout\&quot;) | [Optional] [Defaults to `undefined`] |

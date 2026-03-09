@@ -15,6 +15,7 @@ Name | Type
 `from` | string
 `cc` | object
 `bcc` | object
+`merchantId` | string
 
 ## Example
 
@@ -32,6 +33,7 @@ const example = {
   "from": noreply@cashful.africa,
   "cc": ["admin@cashful.africa"],
   "bcc": ["archive@cashful.africa"],
+  "merchantId": null,
 } satisfies SendEmailDto
 
 console.log(example)

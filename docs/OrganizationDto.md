@@ -23,7 +23,7 @@ const example = {
   "id": org_12345,
   "name": Acme Corp,
   "slug": acme-corp,
-  "logo": https://example.com/logo.png,
+  "logo": https://www.cashful.africa/logo.png,
   "createdAt": 2024-01-01T00:00:00Z,
   "metadata": {"plan":"pro"},
 } satisfies OrganizationDto

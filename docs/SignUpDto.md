@@ -23,8 +23,8 @@ const example = {
   "name": John Doe,
   "email": john.doe@example.com,
   "password": StrongPassword123!,
-  "image": https://example.com/avatar.jpg,
-  "callbackURL": https://example.com/auth/callback,
+  "image": https://www.cashful.africa/avatar.jpg,
+  "callbackURL": https://www.cashful.africa/auth/callback,
   "rememberMe": true,
 } satisfies SignUpDto
 

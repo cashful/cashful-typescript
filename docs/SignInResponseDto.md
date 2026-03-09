@@ -8,7 +8,7 @@ Name | Type
 ------------ | -------------
 `user` | [SessionUserDto](SessionUserDto.md)
 `token` | string
-`redirect` | number
+`redirect` | boolean
 `url` | string
 
 ## Example

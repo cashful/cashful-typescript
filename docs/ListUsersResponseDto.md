@@ -6,7 +6,7 @@
 
 Name | Type
 ------------ | -------------
-`users` | Array&lt;object&gt;
+`users` | [Array&lt;SessionUserDto&gt;](SessionUserDto.md)
 
 ## Example
 
@@ -15,7 +15,7 @@ import type { ListUsersResponseDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "users": [{"id":"user_123","email":"user@example.com"}],
+  "users": null,
 } satisfies ListUsersResponseDto
 
 console.log(example)

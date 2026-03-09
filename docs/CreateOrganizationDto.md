@@ -20,7 +20,7 @@ import type { CreateOrganizationDto } from '@cashful/typescript'
 const example = {
   "name": Acme Corp,
   "slug": acme-corp,
-  "logo": https://example.com/logo.png,
+  "logo": https://www.cashful.africa/logo.png,
   "metadata": {"plan":"pro"},
 } satisfies CreateOrganizationDto
 

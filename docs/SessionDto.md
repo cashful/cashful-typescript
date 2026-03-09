@@ -8,6 +8,11 @@ Name | Type
 ------------ | -------------
 `id` | string
 `userId` | string
+`token` | string
+`createdAt` | Date
+`updatedAt` | Date
+`impersonatedBy` | string
+`activeOrganizationId` | string
 `expiresAt` | Date
 `ipAddress` | string
 `userAgent` | string
@@ -21,6 +26,11 @@ import type { SessionDto } from '@cashful/typescript'
 const example = {
   "id": null,
   "userId": null,
+  "token": null,
+  "createdAt": null,
+  "updatedAt": null,
+  "impersonatedBy": null,
+  "activeOrganizationId": null,
   "expiresAt": null,
   "ipAddress": null,
   "userAgent": null,

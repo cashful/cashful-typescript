@@ -17,7 +17,7 @@ import type { SendVerificationEmailDto } from '@cashful/typescript'
 // TODO: Update the object below with actual values
 const example = {
   "email": user@example.com,
-  "callbackURL": https://example.com/callback,
+  "callbackURL": https://www.cashful.africa/callback,
 } satisfies SendVerificationEmailDto
 
 console.log(example)

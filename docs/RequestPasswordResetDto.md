@@ -17,7 +17,7 @@ import type { RequestPasswordResetDto } from '@cashful/typescript'
 // TODO: Update the object below with actual values
 const example = {
   "email": user@example.com,
-  "redirectTo": https://example.com/reset-password,
+  "redirectTo": https://www.cashful.africa/reset-password,
 } satisfies RequestPasswordResetDto
 
 console.log(example)

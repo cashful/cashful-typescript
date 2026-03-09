@@ -42,9 +42,6 @@ Name | Type
 `termsAccepted` | boolean
 `acceptedAt` | Date
 `currentStep` | string
-`status` | string
-`isCompleted` | boolean
-`completionScore` | number
 
 ## Example
 
@@ -89,9 +86,6 @@ const example = {
   "termsAccepted": null,
   "acceptedAt": null,
   "currentStep": null,
-  "status": null,
-  "isCompleted": null,
-  "completionScore": null,
 } satisfies UpdateOrganizationComplianceDto
 
 console.log(example)

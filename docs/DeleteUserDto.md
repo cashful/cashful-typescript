@@ -17,7 +17,7 @@ import type { DeleteUserDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "callbackURL": https://example.com/goodbye,
+  "callbackURL": https://www.cashful.africa/goodbye,
   "password": CurrentPassword123!,
   "token": delete_token_12345,
 } satisfies DeleteUserDto

@@ -6,7 +6,6 @@
 
 Name | Type
 ------------ | -------------
-`organizationId` | string
 `companyRegistrationName` | string
 `companyRegistrationNumber` | string
 `companyTradingName` | string
@@ -43,9 +42,6 @@ Name | Type
 `termsAccepted` | boolean
 `acceptedAt` | Date
 `currentStep` | string
-`status` | string
-`isCompleted` | boolean
-`completionScore` | number
 
 ## Example
 
@@ -54,7 +50,6 @@ import type { CreateOrganizationComplianceDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "organizationId": null,
   "companyRegistrationName": null,
   "companyRegistrationNumber": null,
   "companyTradingName": null,
@@ -91,9 +86,6 @@ const example = {
   "termsAccepted": null,
   "acceptedAt": null,
   "currentStep": null,
-  "status": null,
-  "isCompleted": null,
-  "completionScore": null,
 } satisfies CreateOrganizationComplianceDto
 
 console.log(example)

@@ -19,7 +19,7 @@ import type { SignInPhoneNumberDto } from '@cashful/typescript'
 const example = {
   "phoneNumber": +1234567890,
   "password": StrongPassword123!,
-  "callbackURL": https://example.com/callback,
+  "callbackURL": https://www.cashful.africa/callback,
 } satisfies SignInPhoneNumberDto
 
 console.log(example)

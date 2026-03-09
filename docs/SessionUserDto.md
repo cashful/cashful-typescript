@@ -10,6 +10,16 @@ Name | Type
 `email` | string
 `emailVerified` | boolean
 `name` | string
+`image` | string
+`role` | string
+`banned` | boolean
+`banReason` | string
+`banExpires` | Date
+`isAnonymous` | boolean
+`username` | string
+`displayUsername` | string
+`phoneNumber` | string
+`phoneNumberVerified` | boolean
 `createdAt` | Date
 `updatedAt` | Date
 
@@ -24,6 +34,16 @@ const example = {
   "email": null,
   "emailVerified": null,
   "name": null,
+  "image": null,
+  "role": null,
+  "banned": null,
+  "banReason": null,
+  "banExpires": null,
+  "isAnonymous": null,
+  "username": null,
+  "displayUsername": null,
+  "phoneNumber": null,
+  "phoneNumberVerified": null,
   "createdAt": null,
   "updatedAt": null,
 } satisfies SessionUserDto

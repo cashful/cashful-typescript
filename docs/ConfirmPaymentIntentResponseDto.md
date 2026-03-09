@@ -9,6 +9,13 @@ Name | Type
 `paymentIntent` | [PaymentIntentResponseDto](PaymentIntentResponseDto.md)
 `iveriParams` | object
 `iVeri3dsEndpoint` | string
+`sandboxMode` | boolean
+`status` | string
+`transactionId` | string
+`authCode` | string
+`amount` | number
+`currency` | string
+`reason` | string
 
 ## Example
 
@@ -20,6 +27,13 @@ const example = {
   "paymentIntent": null,
   "iveriParams": null,
   "iVeri3dsEndpoint": null,
+  "sandboxMode": null,
+  "status": null,
+  "transactionId": null,
+  "authCode": null,
+  "amount": null,
+  "currency": null,
+  "reason": null,
 } satisfies ConfirmPaymentIntentResponseDto
 
 console.log(example)

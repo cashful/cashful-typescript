@@ -1,4 +1,4 @@
-# @cashful/typescript@0.8.4
+# @cashful/typescript@0.9.0
 
 A TypeScript SDK client for the api.cashful.africa API.
 
@@ -122,15 +122,19 @@ All URIs are relative to *https://api.cashful.africa*
 *CheckoutsApi* | [**listCheckoutSessions**](docs/CheckoutsApi.md#listcheckoutsessions) | **GET** /api/canary/checkout/sessions | List Checkout Sessions
 *CheckoutsApi* | [**retrieveCheckoutSession**](docs/CheckoutsApi.md#retrievecheckoutsession) | **GET** /api/canary/checkout/sessions/{id} | Retrieve Checkout Session
 *ComplianceApi* | [**createCompliance**](docs/ComplianceApi.md#createcompliance) | **POST** /api/canary/compliance | Create Compliance info
-*ComplianceApi* | [**getCompliance**](docs/ComplianceApi.md#getcompliance) | **GET** /api/canary/compliance | Get Compliance info for organization
+*ComplianceApi* | [**listCompliance**](docs/ComplianceApi.md#listcompliance) | **GET** /api/canary/compliance | List Compliance info for organization
 *ComplianceApi* | [**updateCompliance**](docs/ComplianceApi.md#updatecompliance) | **PATCH** /api/canary/compliance/{id} | Update Compliance info
 *CustomersApi* | [**createCustomer**](docs/CustomersApi.md#createcustomer) | **POST** /api/canary/customers | Create Customer
+*CustomersApi* | [**deleteCustomersBulk**](docs/CustomersApi.md#deletecustomersbulk) | **DELETE** /api/canary/customers/bulk | Bulk Delete Customers
 *CustomersApi* | [**getCustomerBalance**](docs/CustomersApi.md#getcustomerbalance) | **GET** /api/canary/customers/{id}/balance | Get Customer\&#39;s Cash Balance
 *CustomersApi* | [**listCustomerPaymentMethods**](docs/CustomersApi.md#listcustomerpaymentmethods) | **GET** /api/canary/customers/{id}/payment-methods | List Customer\&#39;s Payment Methods
 *CustomersApi* | [**listCustomerTransactions**](docs/CustomersApi.md#listcustomertransactions) | **GET** /api/canary/customers/{id}/transactions | List Customer\&#39;s Cash Transactions
 *CustomersApi* | [**listCustomers**](docs/CustomersApi.md#listcustomers) | **GET** /api/canary/customers | List Customers
 *CustomersApi* | [**retrieveCustomer**](docs/CustomersApi.md#retrievecustomer) | **GET** /api/canary/customers/{id} | Retrieve Customer
 *CustomersApi* | [**updateCustomer**](docs/CustomersApi.md#updatecustomer) | **PATCH** /api/canary/customers/{id} | Update Customer
+*CustomersApi* | [**updateCustomersBulk**](docs/CustomersApi.md#updatecustomersbulk) | **PATCH** /api/canary/customers/bulk | Bulk Update Customers
+*EventsApi* | [**createEvent**](docs/EventsApi.md#createevent) | **POST** /api/canary/events | Create Event
+*EventsApi* | [**listEventTypes**](docs/EventsApi.md#listeventtypes) | **GET** /api/canary/events/types | List Event Types
 *EventsApi* | [**listEvents**](docs/EventsApi.md#listevents) | **GET** /api/canary/events | List Events
 *HealthApi* | [**checkHealth**](docs/HealthApi.md#checkhealth) | **GET** /api/canary/health | Health check endpoint
 *NotificationsApi* | [**sendEmail**](docs/NotificationsApi.md#sendemail) | **POST** /api/canary/notifications/email | Send an email notification
@@ -152,10 +156,12 @@ All URIs are relative to *https://api.cashful.africa*
 *PayoutsApi* | [**createPayout**](docs/PayoutsApi.md#createpayout) | **POST** /api/canary/payouts | Create Payout
 *PayoutsApi* | [**listPayouts**](docs/PayoutsApi.md#listpayouts) | **GET** /api/canary/payouts | List Payouts
 *ProductsApi* | [**createProduct**](docs/ProductsApi.md#createproduct) | **POST** /api/canary/products | Create Product
+*ProductsApi* | [**deleteProduct**](docs/ProductsApi.md#deleteproduct) | **DELETE** /api/canary/products/{id} | Delete Product
+*ProductsApi* | [**deleteProductsBulk**](docs/ProductsApi.md#deleteproductsbulk) | **DELETE** /api/canary/products/bulk | Bulk Delete Products
 *ProductsApi* | [**listProducts**](docs/ProductsApi.md#listproducts) | **GET** /api/canary/products | List Products
-*ProductsApi* | [**retrieveMultipleProducts**](docs/ProductsApi.md#retrievemultipleproducts) | **POST** /api/canary/products/multiple | Retrieve Multiple Products by ID
 *ProductsApi* | [**retrieveProduct**](docs/ProductsApi.md#retrieveproduct) | **GET** /api/canary/products/{id} | Retrieve Product
 *ProductsApi* | [**updateProduct**](docs/ProductsApi.md#updateproduct) | **PATCH** /api/canary/products/{id} | Update Product
+*ProductsApi* | [**updateProductsBulk**](docs/ProductsApi.md#updateproductsbulk) | **PATCH** /api/canary/products/bulk | Bulk Update Products
 *PurchasesApi* | [**createPurchase**](docs/PurchasesApi.md#createpurchase) | **POST** /api/canary/purchases | Buy with Cash Balance
 *StorageApi* | [**confirmUpload**](docs/StorageApi.md#confirmupload) | **POST** /api/canary/storage/confirm-upload | Confirm that a file upload was completed
 *StorageApi* | [**deleteFile**](docs/StorageApi.md#deletefile) | **DELETE** /api/canary/storage/{id} | Delete a file
@@ -199,6 +205,9 @@ All URIs are relative to *https://api.cashful.africa*
 - [BanUserDto](docs/BanUserDto.md)
 - [BanUserResponseDto](docs/BanUserResponseDto.md)
 - [BaseDto](docs/BaseDto.md)
+- [BulkIdsDto](docs/BulkIdsDto.md)
+- [BulkUpdateCustomersInputDto](docs/BulkUpdateCustomersInputDto.md)
+- [BulkUpdateProductsInputDto](docs/BulkUpdateProductsInputDto.md)
 - [CancelInvitationDto](docs/CancelInvitationDto.md)
 - [CancelInvitationResponseDto](docs/CancelInvitationResponseDto.md)
 - [ChangeEmailDto](docs/ChangeEmailDto.md)
@@ -218,6 +227,8 @@ All URIs are relative to *https://api.cashful.africa*
 - [CreateBalanceDto](docs/CreateBalanceDto.md)
 - [CreateCheckoutSessionDto](docs/CreateCheckoutSessionDto.md)
 - [CreateCustomerDto](docs/CreateCustomerDto.md)
+- [CreateEventDto](docs/CreateEventDto.md)
+- [CreateEventTypeDto](docs/CreateEventTypeDto.md)
 - [CreateOrganizationComplianceDto](docs/CreateOrganizationComplianceDto.md)
 - [CreateOrganizationDto](docs/CreateOrganizationDto.md)
 - [CreateOrganizationResponseDto](docs/CreateOrganizationResponseDto.md)
@@ -242,6 +253,7 @@ All URIs are relative to *https://api.cashful.africa*
 - [DeleteUserDto](docs/DeleteUserDto.md)
 - [DeleteUserResponseDto](docs/DeleteUserResponseDto.md)
 - [EventResponseDto](docs/EventResponseDto.md)
+- [EventTypeResponseDto](docs/EventTypeResponseDto.md)
 - [EvervaultEncryptedCardDto](docs/EvervaultEncryptedCardDto.md)
 - [FileDto](docs/FileDto.md)
 - [ForbiddenResponseDto](docs/ForbiddenResponseDto.md)
@@ -265,6 +277,7 @@ All URIs are relative to *https://api.cashful.africa*
 - [ImpersonateUserResponseDto](docs/ImpersonateUserResponseDto.md)
 - [InitiatePaymentDto](docs/InitiatePaymentDto.md)
 - [InitiatePaymentResponseDto](docs/InitiatePaymentResponseDto.md)
+- [InternalAnalyticsInsightsDto](docs/InternalAnalyticsInsightsDto.md)
 - [InternalServerErrorResponseDto](docs/InternalServerErrorResponseDto.md)
 - [InvitationDto](docs/InvitationDto.md)
 - [InviteMemberDto](docs/InviteMemberDto.md)
@@ -278,17 +291,21 @@ All URIs are relative to *https://api.cashful.africa*
 - [LineItemDto](docs/LineItemDto.md)
 - [LinkSocialDto](docs/LinkSocialDto.md)
 - [LinkSocialResponseDto](docs/LinkSocialResponseDto.md)
+- [LinkedAccountDto](docs/LinkedAccountDto.md)
 - [ListAccountsResponseDto](docs/ListAccountsResponseDto.md)
 - [ListApiKeysResponseDto](docs/ListApiKeysResponseDto.md)
 - [ListCheckoutSessionsResponseDto](docs/ListCheckoutSessionsResponseDto.md)
 - [ListCustomerPaymentMethodsResponseDto](docs/ListCustomerPaymentMethodsResponseDto.md)
 - [ListCustomerTransactionsResponseDto](docs/ListCustomerTransactionsResponseDto.md)
 - [ListCustomersResponseDto](docs/ListCustomersResponseDto.md)
+- [ListEventTypesResponseDto](docs/ListEventTypesResponseDto.md)
 - [ListEventsResponseDto](docs/ListEventsResponseDto.md)
 - [ListFilesResponseDto](docs/ListFilesResponseDto.md)
 - [ListInvitationsResponseDto](docs/ListInvitationsResponseDto.md)
 - [ListMembersResponseDto](docs/ListMembersResponseDto.md)
+- [ListMerchantBalancesResponseDto](docs/ListMerchantBalancesResponseDto.md)
 - [ListOrganizationComplianceResponseDto](docs/ListOrganizationComplianceResponseDto.md)
+- [ListOrganizationsResponseDto](docs/ListOrganizationsResponseDto.md)
 - [ListPaymentIntentsResponseDto](docs/ListPaymentIntentsResponseDto.md)
 - [ListPaymentLinksResponseDto](docs/ListPaymentLinksResponseDto.md)
 - [ListPaymentMethodsResponseDto](docs/ListPaymentMethodsResponseDto.md)
@@ -331,7 +348,6 @@ All URIs are relative to *https://api.cashful.africa*
 - [ResetPasswordResponseDto](docs/ResetPasswordResponseDto.md)
 - [ResetPhonePasswordDto](docs/ResetPhonePasswordDto.md)
 - [ResetPhonePasswordResponseDto](docs/ResetPhonePasswordResponseDto.md)
-- [RetrieveMultipleProductsDto](docs/RetrieveMultipleProductsDto.md)
 - [RevokeSessionDto](docs/RevokeSessionDto.md)
 - [RevokeSessionResponseDto](docs/RevokeSessionResponseDto.md)
 - [SendEmail200Response](docs/SendEmail200Response.md)
@@ -370,9 +386,11 @@ All URIs are relative to *https://api.cashful.africa*
 - [UpdateCheckoutSessionDto](docs/UpdateCheckoutSessionDto.md)
 - [UpdateCheckoutSessionResponseDto](docs/UpdateCheckoutSessionResponseDto.md)
 - [UpdateCustomerDto](docs/UpdateCustomerDto.md)
+- [UpdateFileDto](docs/UpdateFileDto.md)
 - [UpdateMemberRoleDto](docs/UpdateMemberRoleDto.md)
 - [UpdateMemberRoleResponseDto](docs/UpdateMemberRoleResponseDto.md)
 - [UpdateOrganizationComplianceDto](docs/UpdateOrganizationComplianceDto.md)
+- [UpdateOrganizationComplianceInternalDto](docs/UpdateOrganizationComplianceInternalDto.md)
 - [UpdateOrganizationDto](docs/UpdateOrganizationDto.md)
 - [UpdateOrganizationResponseDto](docs/UpdateOrganizationResponseDto.md)
 - [UpdatePaymentLinkDto](docs/UpdatePaymentLinkDto.md)
@@ -404,8 +422,8 @@ This TypeScript SDK client supports the [Fetch API](https://fetch.spec.whatwg.or
 and is automatically generated by the
 [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `0.8.4`
-- Package version: `0.8.4`
+- API version: `0.9.0`
+- Package version: `0.9.0`
 - Generator version: `7.17.0`
 - Build package: `org.openapitools.codegen.languages.TypeScriptFetchClientCodegen`
 

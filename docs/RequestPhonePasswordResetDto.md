@@ -17,7 +17,7 @@ import type { RequestPhonePasswordResetDto } from '@cashful/typescript'
 // TODO: Update the object below with actual values
 const example = {
   "phoneNumber": +1234567890,
-  "callbackURL": https://example.com/reset-password,
+  "callbackURL": https://www.cashful.africa/reset-password,
 } satisfies RequestPhonePasswordResetDto
 
 console.log(example)

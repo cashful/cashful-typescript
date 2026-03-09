@@ -86,7 +86,7 @@ example().catch(console.error);
 
 ## listPaymentMethods
 
-> ListPaymentMethodsResponseDto listPaymentMethods(limit, offset, merchantId, customerId)
+> ListPaymentMethodsResponseDto listPaymentMethods(limit, offset, filter, sort, order, merchantId, customerId)
 
 List Payment Methods
 
@@ -110,13 +110,19 @@ async function example() {
   const api = new PaymentMethodsApi(config);
 
   const body = {
-    // number | Maximum number of records to return (optional)
+    // number | Maximum number of items to return (optional)
     limit: 50,
-    // number | Number of records to skip (optional)
+    // number | Number of items to skip (optional)
     offset: 0,
-    // string | The unique identifier of the merchant. If not provided, defaults to the authenticated user\'s active organization. (optional)
+    // string | JSON string used for dynamic filtering (optional)
+    filter: {"ids":["prod_123","prod_456"]},
+    // string | Field name to sort by (optional)
+    sort: createdAt,
+    // string | Sort direction (optional)
+    order: DESC,
+    // string | The ID of the merchant. If omitted, defaults to the authenticated merchant. (optional)
     merchantId: merchantId_example,
-    // string | The unique identifier of the customer (optional)
+    // string | Customer ID to filter by (optional)
     customerId: customerId_example,
   } satisfies ListPaymentMethodsRequest;
 
@@ -137,10 +143,13 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
-| **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
-| **merchantId** | `string` | The unique identifier of the merchant. If not provided, defaults to the authenticated user\&#39;s active organization. | [Optional] [Defaults to `undefined`] |
-| **customerId** | `string` | The unique identifier of the customer | [Optional] [Defaults to `undefined`] |
+| **limit** | `number` | Maximum number of items to return | [Optional] [Defaults to `undefined`] |
+| **offset** | `number` | Number of items to skip | [Optional] [Defaults to `undefined`] |
+| **filter** | `string` | JSON string used for dynamic filtering | [Optional] [Defaults to `undefined`] |
+| **sort** | `string` | Field name to sort by | [Optional] [Defaults to `undefined`] |
+| **order** | `string` | Sort direction | [Optional] [Defaults to `undefined`] |
+| **merchantId** | `string` | The ID of the merchant. If omitted, defaults to the authenticated merchant. | [Optional] [Defaults to `undefined`] |
+| **customerId** | `string` | Customer ID to filter by | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 

@@ -7,6 +7,7 @@
 Name | Type
 ------------ | -------------
 `status` | string
+`environment` | string
 `timestamp` | string
 
 ## Example
@@ -17,6 +18,7 @@ import type { IVeriHealthCheckResponseDto } from '@cashful/typescript'
 // TODO: Update the object below with actual values
 const example = {
   "status": ok,
+  "environment": live,
   "timestamp": 2024-01-15T10:30:00.000Z,
 } satisfies IVeriHealthCheckResponseDto
 

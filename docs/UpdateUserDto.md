@@ -17,7 +17,7 @@ import type { UpdateUserDto } from '@cashful/typescript'
 // TODO: Update the object below with actual values
 const example = {
   "name": John Doe,
-  "image": https://example.com/avatar.jpg,
+  "image": https://www.cashful.africa/avatar.jpg,
 } satisfies UpdateUserDto
 
 console.log(example)

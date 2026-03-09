@@ -87,7 +87,7 @@ example().catch(console.error);
 
 ## listTransfers
 
-> ListTransfersResponseDto listTransfers(limit, offset, merchantId)
+> ListTransfersResponseDto listTransfers(limit, offset, filter, sort, order, merchantId)
 
 List Transfers
 
@@ -115,6 +115,12 @@ async function example() {
     limit: 50,
     // number | Number of items to skip (optional)
     offset: 0,
+    // string | JSON string used for dynamic filtering (optional)
+    filter: {"ids":["prod_123","prod_456"]},
+    // string | Field name to sort by (optional)
+    sort: createdAt,
+    // string | Sort direction (optional)
+    order: DESC,
     // string | Filter by merchant ID. If omitted, defaults to the authenticated merchant. (optional)
     merchantId: merchantId_example,
   } satisfies ListTransfersRequest;
@@ -138,6 +144,9 @@ example().catch(console.error);
 |------------- | ------------- | ------------- | -------------|
 | **limit** | `number` | Maximum number of items to return | [Optional] [Defaults to `undefined`] |
 | **offset** | `number` | Number of items to skip | [Optional] [Defaults to `undefined`] |
+| **filter** | `string` | JSON string used for dynamic filtering | [Optional] [Defaults to `undefined`] |
+| **sort** | `string` | Field name to sort by | [Optional] [Defaults to `undefined`] |
+| **order** | `string` | Sort direction | [Optional] [Defaults to `undefined`] |
 | **merchantId** | `string` | Filter by merchant ID. If omitted, defaults to the authenticated merchant. | [Optional] [Defaults to `undefined`] |
 
 ### Return type

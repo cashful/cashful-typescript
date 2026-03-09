@@ -8,6 +8,14 @@ Name | Type
 ------------ | -------------
 `iveriParams` | [IveriParamsDto](IveriParamsDto.md)
 `iVeri3dsEndpoint` | string
+`sandboxMode` | boolean
+`status` | string
+`paymentIntentId` | string
+`transactionId` | string
+`authCode` | string
+`amount` | number
+`currency` | string
+`reason` | string
 
 ## Example
 
@@ -18,6 +26,14 @@ import type { InitiatePaymentResponseDto } from '@cashful/typescript'
 const example = {
   "iveriParams": null,
   "iVeri3dsEndpoint": https://portal.nedsecure.co.za/threedsecure/EnrollmentInitial,
+  "sandboxMode": false,
+  "status": null,
+  "paymentIntentId": pi_xyz789,
+  "transactionId": sb_txn_1234567890,
+  "authCode": SB123456,
+  "amount": 10000,
+  "currency": ZAR,
+  "reason": card_declined,
 } satisfies InitiatePaymentResponseDto
 
 console.log(example)

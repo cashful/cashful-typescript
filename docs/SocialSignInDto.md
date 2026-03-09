@@ -25,9 +25,9 @@ import type { SocialSignInDto } from '@cashful/typescript'
 // TODO: Update the object below with actual values
 const example = {
   "provider": google,
-  "callbackURL": https://example.com/auth/callback,
-  "newUserCallbackURL": https://example.com/auth/new-user,
-  "errorCallbackURL": https://example.com/auth/error,
+  "callbackURL": https://www.cashful.africa/auth/callback,
+  "newUserCallbackURL": https://www.cashful.africa/auth/new-user,
+  "errorCallbackURL": https://www.cashful.africa/auth/error,
   "disableRedirect": false,
   "idToken": null,
   "scopes": ["email","profile"],

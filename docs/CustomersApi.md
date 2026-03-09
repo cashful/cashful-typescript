@@ -5,12 +5,14 @@ All URIs are relative to *https://api.cashful.africa*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**createCustomer**](CustomersApi.md#createcustomer) | **POST** /api/canary/customers | Create Customer |
+| [**deleteCustomersBulk**](CustomersApi.md#deletecustomersbulk) | **DELETE** /api/canary/customers/bulk | Bulk Delete Customers |
 | [**getCustomerBalance**](CustomersApi.md#getcustomerbalance) | **GET** /api/canary/customers/{id}/balance | Get Customer\&#39;s Cash Balance |
 | [**listCustomerPaymentMethods**](CustomersApi.md#listcustomerpaymentmethods) | **GET** /api/canary/customers/{id}/payment-methods | List Customer\&#39;s Payment Methods |
 | [**listCustomerTransactions**](CustomersApi.md#listcustomertransactions) | **GET** /api/canary/customers/{id}/transactions | List Customer\&#39;s Cash Transactions |
 | [**listCustomers**](CustomersApi.md#listcustomers) | **GET** /api/canary/customers | List Customers |
 | [**retrieveCustomer**](CustomersApi.md#retrievecustomer) | **GET** /api/canary/customers/{id} | Retrieve Customer |
 | [**updateCustomer**](CustomersApi.md#updatecustomer) | **PATCH** /api/canary/customers/{id} | Update Customer |
+| [**updateCustomersBulk**](CustomersApi.md#updatecustomersbulk) | **PATCH** /api/canary/customers/bulk | Bulk Update Customers |
 
 
 
@@ -84,6 +86,81 @@ example().catch(console.error);
 | **400** | Bad Request - Invalid input |  -  |
 | **401** | Unauthorized |  -  |
 | **409** | Customer with this email already exists |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
+## deleteCustomersBulk
+
+> any deleteCustomersBulk(bulkIdsDto)
+
+Bulk Delete Customers
+
+Deletes multiple customers by ID.
+
+### Example
+
+```ts
+import {
+  Configuration,
+  CustomersApi,
+} from '@cashful/typescript';
+import type { DeleteCustomersBulkRequest } from '@cashful/typescript';
+
+async function example() {
+  console.log("🚀 Testing @cashful/typescript SDK...");
+  const config = new Configuration({ 
+    // Configure HTTP bearer authorization: bearer
+    accessToken: "YOUR BEARER TOKEN",
+  });
+  const api = new CustomersApi(config);
+
+  const body = {
+    // BulkIdsDto
+    bulkIdsDto: ...,
+  } satisfies DeleteCustomersBulkRequest;
+
+  try {
+    const data = await api.deleteCustomersBulk(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bulkIdsDto** | [BulkIdsDto](BulkIdsDto.md) |  | |
+
+### Return type
+
+**any**
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Customers deleted successfully |  -  |
+| **400** | Bad Request - Invalid input |  -  |
+| **401** | Unauthorized |  -  |
+| **404** | Resource not found |  -  |
 | **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
@@ -325,7 +402,7 @@ example().catch(console.error);
 
 ## listCustomers
 
-> ListCustomersResponseDto listCustomers(merchantId, limit, offset, email, search)
+> ListCustomersResponseDto listCustomers(merchantId, limit, offset, filter, sort, order, email)
 
 List Customers
 
@@ -355,10 +432,14 @@ async function example() {
     limit: 8.14,
     // number | Number of records to skip (optional)
     offset: 8.14,
+    // string | JSON string used for dynamic filtering (optional)
+    filter: filter_example,
+    // 'id' | 'name' | 'email' | 'phoneNumber' | 'merchantId' | 'createdAt' | 'updatedAt' (optional)
+    sort: sort_example,
+    // string (optional)
+    order: DESC,
     // string | Filter by email address (optional)
     email: email_example,
-    // string | Search across customer fields (optional)
-    search: search_example,
   } satisfies ListCustomersRequest;
 
   try {
@@ -381,8 +462,10 @@ example().catch(console.error);
 | **merchantId** | `string` | The ID of the merchant whose balance is being requested. If omitted, defaults to the authenticated merchant. | [Optional] [Defaults to `undefined`] |
 | **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
 | **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
+| **filter** | `string` | JSON string used for dynamic filtering | [Optional] [Defaults to `undefined`] |
+| **sort** | `id`, `name`, `email`, `phoneNumber`, `merchantId`, `createdAt`, `updatedAt` |  | [Optional] [Defaults to `undefined`] [Enum: id, name, email, phoneNumber, merchantId, createdAt, updatedAt] |
+| **order** | `string` |  | [Optional] [Defaults to `undefined`] |
 | **email** | `string` | Filter by email address | [Optional] [Defaults to `undefined`] |
-| **search** | `string` | Search across customer fields | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 
@@ -558,6 +641,81 @@ example().catch(console.error);
 | **401** | Unauthorized |  -  |
 | **404** | Resource not found |  -  |
 | **409** | Email already in use by another customer |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
+## updateCustomersBulk
+
+> any updateCustomersBulk(bulkUpdateCustomersInputDto)
+
+Bulk Update Customers
+
+Updates multiple customers using a shared patch.
+
+### Example
+
+```ts
+import {
+  Configuration,
+  CustomersApi,
+} from '@cashful/typescript';
+import type { UpdateCustomersBulkRequest } from '@cashful/typescript';
+
+async function example() {
+  console.log("🚀 Testing @cashful/typescript SDK...");
+  const config = new Configuration({ 
+    // Configure HTTP bearer authorization: bearer
+    accessToken: "YOUR BEARER TOKEN",
+  });
+  const api = new CustomersApi(config);
+
+  const body = {
+    // BulkUpdateCustomersInputDto
+    bulkUpdateCustomersInputDto: ...,
+  } satisfies UpdateCustomersBulkRequest;
+
+  try {
+    const data = await api.updateCustomersBulk(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bulkUpdateCustomersInputDto** | [BulkUpdateCustomersInputDto](BulkUpdateCustomersInputDto.md) |  | |
+
+### Return type
+
+**any**
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Customers updated successfully |  -  |
+| **400** | Bad Request - Invalid input |  -  |
+| **401** | Unauthorized |  -  |
+| **404** | Resource not found |  -  |
 | **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)

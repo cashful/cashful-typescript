@@ -9,6 +9,7 @@ Name | Type
 `to` | object
 `message` | string
 `from` | string
+`merchantId` | string
 
 ## Example
 
@@ -20,6 +21,7 @@ const example = {
   "to": +27123456789,
   "message": Your verification code is: 123456,
   "from": Cashful,
+  "merchantId": null,
 } satisfies SendSmsDto
 
 console.log(example)

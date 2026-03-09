@@ -10,6 +10,13 @@ Name | Type
 `paymentIntentId` | string
 `iveriParams` | object
 `iVeri3dsEndpoint` | string
+`sandboxMode` | boolean
+`status` | string
+`transactionId` | string
+`authCode` | string
+`amount` | number
+`currency` | string
+`reason` | string
 
 ## Example
 
@@ -22,6 +29,13 @@ const example = {
   "paymentIntentId": null,
   "iveriParams": null,
   "iVeri3dsEndpoint": null,
+  "sandboxMode": null,
+  "status": null,
+  "transactionId": null,
+  "authCode": null,
+  "amount": null,
+  "currency": null,
+  "reason": null,
 } satisfies CheckoutSessionConfirmResponseDto
 
 console.log(example)

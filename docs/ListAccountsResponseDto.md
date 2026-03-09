@@ -6,7 +6,7 @@
 
 Name | Type
 ------------ | -------------
-`accounts` | Array&lt;object&gt;
+`accounts` | [Array&lt;LinkedAccountDto&gt;](LinkedAccountDto.md)
 
 ## Example
 
@@ -15,7 +15,7 @@ import type { ListAccountsResponseDto } from '@cashful/typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "accounts": [{"provider":"google","email":"user@gmail.com"}],
+  "accounts": null,
 } satisfies ListAccountsResponseDto
 
 console.log(example)

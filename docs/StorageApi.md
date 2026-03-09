@@ -307,7 +307,7 @@ example().catch(console.error);
 
 ## listFiles
 
-> ListFilesResponseDto listFiles(limit, offset, tag, status, relatedEntityId, relatedEntityType)
+> ListFilesResponseDto listFiles(limit, offset, filter, sort, order, tag, status, relatedEntityId, relatedEntityType)
 
 List files
 
@@ -329,10 +329,16 @@ async function example() {
   const api = new StorageApi(config);
 
   const body = {
-    // number | Maximum number of records to return (optional)
+    // number | Maximum number of items to return (optional)
     limit: 50,
-    // number | Number of records to skip (optional)
+    // number | Number of items to skip (optional)
     offset: 0,
+    // string | JSON string used for dynamic filtering (optional)
+    filter: {"ids":["prod_123","prod_456"]},
+    // string | Field name to sort by (optional)
+    sort: createdAt,
+    // string | Sort direction (optional)
+    order: DESC,
     // string | Filter by tag (optional)
     tag: tag_example,
     // 'pending' | 'uploaded' | 'failed' | 'deleted' (optional)
@@ -360,8 +366,11 @@ example().catch(console.error);
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **limit** | `number` | Maximum number of records to return | [Optional] [Defaults to `undefined`] |
-| **offset** | `number` | Number of records to skip | [Optional] [Defaults to `undefined`] |
+| **limit** | `number` | Maximum number of items to return | [Optional] [Defaults to `undefined`] |
+| **offset** | `number` | Number of items to skip | [Optional] [Defaults to `undefined`] |
+| **filter** | `string` | JSON string used for dynamic filtering | [Optional] [Defaults to `undefined`] |
+| **sort** | `string` | Field name to sort by | [Optional] [Defaults to `undefined`] |
+| **order** | `string` | Sort direction | [Optional] [Defaults to `undefined`] |
 | **tag** | `string` | Filter by tag | [Optional] [Defaults to `undefined`] |
 | **status** | `pending`, `uploaded`, `failed`, `deleted` |  | [Optional] [Defaults to `undefined`] [Enum: pending, uploaded, failed, deleted] |
 | **relatedEntityId** | `string` |  | [Optional] [Defaults to `undefined`] |
