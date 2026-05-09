@@ -32,6 +32,8 @@ import type { CancelPaymentIntentRequest } from '@cashful/typescript';
 async function example() {
   console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
+    // To configure API key authorization: apiKey
+    apiKey: "YOUR API KEY",
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
   });
@@ -67,7 +69,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -107,6 +109,8 @@ import type { ConfirmPaymentIntentRequest } from '@cashful/typescript';
 async function example() {
   console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
+    // To configure API key authorization: apiKey
+    apiKey: "YOUR API KEY",
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
   });
@@ -145,7 +149,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -185,6 +189,8 @@ import type { CreatePaymentIntentRequest } from '@cashful/typescript';
 async function example() {
   console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
+    // To configure API key authorization: apiKey
+    apiKey: "YOUR API KEY",
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
   });
@@ -220,7 +226,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -261,6 +267,8 @@ import type { ListPaymentIntentsRequest } from '@cashful/typescript';
 async function example() {
   console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
+    // To configure API key authorization: apiKey
+    apiKey: "YOUR API KEY",
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
   });
@@ -305,7 +313,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -343,6 +351,8 @@ import type { RetrievePaymentIntentRequest } from '@cashful/typescript';
 async function example() {
   console.log("🚀 Testing @cashful/typescript SDK...");
   const config = new Configuration({ 
+    // To configure API key authorization: apiKey
+    apiKey: "YOUR API KEY",
     // Configure HTTP bearer authorization: bearer
     accessToken: "YOUR BEARER TOKEN",
   });
@@ -378,7 +388,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer)
 
 ### HTTP request headers
 
